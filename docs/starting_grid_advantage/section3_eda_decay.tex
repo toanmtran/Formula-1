@@ -1,0 +1,82 @@
+% ==============================================================================
+% SECTION 3: EXPLORATORY DATA ANALYSIS & ADVANTAGE DECAY
+% ==============================================================================
+\section{Exploratory Data Analysis and Advantage Decay}
+\label{sec:eda}
+
+Before deploying complex inferential or machine learning structures, it is statistically imperative to evaluate the empirical distributions within the cleaned sample space. This section presents the empirical findings addressing the baseline advantage of track position, era-specific performance gaps, track geometry correlations, and the mathematical decay function of qualifying up front.
+
+\subsection{RQ1: The Empirical Baseline of Pole Position $P(\text{Win} \mid \text{Pole})$}
+\label{subsec:rq1_pole}
+
+To establish the absolute baseline power of the premier starting slot, we evaluate the empirical conditional probability of a driver securing an outright race victory ($\text{positionOrder} = 1$) given that they initiated the event from Pole Position ($\text{grid} = 1$). 
+
+Across the entire historical horizon of the dataset, the pipeline identifies a total of $1,162$ valid Pole Position starts. Out of these elite opportunities, the leading driver successfully converted the start into a race victory exactly $500$ times. This yields the formal empirical conditional probability:
+\begin{equation}
+P(\text{Win} \mid \text{Pole}) = \frac{500}{1162} \approx 43.03\%
+\end{equation}
+This percentage underscores that while starting on Pole provides the single highest mathematical probability of winning an event, more than half of all races ($56.97\%$) are decided by dynamic in-race variables, strategic pit-stops, environmental drift, or mechanical attrition.
+
+\subsection{RQ2: Era-Specific Stratification—Front of the Grid vs. Midfield ($\ge 2010$)}
+\label{subsec:rq2_eras}
+
+To understand how track position groups partition performance in the modern sporting landscape, we isolate observations from the modern hybrid and ground-effect eras ($\text{year} \ge 2010$). We stratify competitors into two explicit cohorts: the \textit{Front of the Grid} cohort ($\text{grid} \in [1, 5]$) and the \textit{Midfield} cohort ($\text{grid} \in [6, 10]$). 
+
+The empirical means for final finishing rankings ($\text{positionOrder}$) and championship points hauled are compiled in Table~\ref{tab:era_stratification}.
+
+\begin{table}[h!]
+\centering
+\caption{Modern Era Performance Stratification ($\ge 2010$)}
+\label{tab:era_stratification}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Qualifying Cohort} & \textbf{Mean Finishing Position ($\downarrow$ is better)} & \textbf{Mean Points Scored ($\uparrow$ is better)} \\
+\midrule
+Front of the Grid (P1--P5) & 5.41 & 13.25 \\
+Midfield (P6--P10)         & 9.78 &  4.72 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The descriptive metrics reveal an aggressive performance bifurcation. Drivers starting in the top 5 maintain a mean finishing orientation close to their starting slots ($5.41$) and extract a substantial point premium ($13.25$ points per race). Conversely, the midfield cohort averages a finish near the tail-end of the points-scoring zone ($9.78$) with a dramatically compromised point yield ($4.72$ points). This stark delta confirms that qualifying tier boundaries are highly predictive of modern race outcomes.
+
+\subsection{RQ3: Circuit Typology Correlation (Monaco vs. Monza)}
+\label{subsec:rq3_correlation}
+
+To evaluate if the predictive power of track position is uniform or structurally moderated by track architecture, we compute the local Pearson correlation coefficient ($r$) between the initial grid slot and the final placement order across contrasting track geometries. 
+
+The analytical results isolate two historical archetypes:
+\begin{itemize}
+    \item \textbf{Circuit de Monaco (Narrow Street Circuit archetype):} $r_{\text{Monaco}} = 0.4232$
+    \item \textbf{Autodromo Nazionale Monza (Wide Permanent Circuit archetype):} $r_{\text{Monza}} = 0.4013$
+\end{itemize}
+The empirical correlation coefficient is higher at Monaco ($0.4232$) than at Monza ($0.4013$). This directional variance aligns with physical intuition: Monaco's tight street walls and minimal passing zones place a higher deterministic premium on qualifying position. However, the relatively slim magnitude of the gap ($ \Delta r \approx 0.0219$) suggests that baseline grid positioning remains a highly dominant anchor across all historical track layouts, regardless of physical width.
+
+\subsection{RQ4: The Mathematical Curve of Advantage Decay}
+\label{subsec:rq4_decay}
+
+To capture the continuous rate at which the probability of securing a podium finish ($P(\text{Podium} \mid \text{Grid})$) and the average finishing orientation deteriorate, the pipeline aggregates data across the top 20 starting slots.
+
+% ------------------------------------------------------------------------------
+% VỊ TRÍ 1: CHÈN ẢNH PODIUM DECAY
+% ------------------------------------------------------------------------------
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{01_podium_decay.jpg}
+    \caption{Empirical Probability of Achieving a Podium Finish $P(\text{Podium} \mid \text{Grid})$ across Starting Positions.}
+    \label{fig:podium_decay}
+\end{figure}
+
+The system outputs two distinct non-linear decay patterns as illustrated in the empirical distribution models. As visualized in Figure~\ref{fig:podium_decay}, starting from Pole Position, the probability of finishing on the podium exhibits its maximum concentration. As the initial grid position cascades backward toward P4, P5, and eventually P10, the podium probability exhibits an exponential-like decay curve, flattening directly into statistical noise once a driver drops past the top 10 starting slots on the grid.
+
+% ------------------------------------------------------------------------------
+% VỊ TRÍ 2: CHÈN ẢNH MEAN FINISH DECAY
+% ------------------------------------------------------------------------------
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{02_mean_finish_decay.jpg}
+    \caption{Strictly Monotonic Decay Curve of the Mean Final Finishing Positions relative to Grid Slots.}
+    \label{fig:mean_finish_decay}
+\end{figure}
+
+Complementing the probability distribution, the line plotting mean finishing positions as a function of starting slots (Figure~\ref{fig:mean_finish_decay}) demonstrates a strictly monotonic relationship. However, the gradient is significantly steepest between P1 and P5. Once a driver passes the P12 boundary, the finishing position curve flattens heavily, indicating that lower-tier starting positions are severely randomized by midfield racing incidents, safety car deployments, and mechanical retirements.

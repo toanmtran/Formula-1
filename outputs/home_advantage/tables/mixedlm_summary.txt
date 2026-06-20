@@ -1,0 +1,17 @@
+                Mixed Linear Model Regression Results
+=====================================================================
+Model:               MixedLM    Dependent Variable:    teammate_delta
+No. Observations:    27304      Method:                REML          
+No. Groups:          865        Scale:                 0.0228        
+Min. group size:     1          Log-Likelihood:        12524.8223    
+Max. group size:     431        Converged:             Yes           
+Mean group size:     31.6                                            
+---------------------------------------------------------------------
+                           Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------------------
+Intercept                  -0.010    0.002 -3.956 0.000 -0.015 -0.005
+home_race                  -0.006    0.005 -1.316 0.188 -0.015  0.003
+experience_years           -0.001    0.000 -4.956 0.000 -0.002 -0.001
+home_race:experience_years  0.002    0.001  2.103 0.035  0.000  0.003
+Group Var                   0.002    0.001                           
+=====================================================================

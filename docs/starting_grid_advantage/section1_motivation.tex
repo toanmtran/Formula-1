@@ -1,0 +1,28 @@
+% ==============================================================================
+% SECTION 1: MOTIVATION & RESEARCH QUESTIONS
+% ==============================================================================
+\section{Motivation and Research Questions}
+\label{sec:motivation}
+
+A foundational inquiry within sports economics and competitive dynamics centers on quantifying the exact structural advantage conferred by preferential starting positions. In traditional field or court-based athletics, home-field advantage or structural seeding manifests as significant, well-documented performance premiums. In motorsport engineering—specifically Formula 1—the correlation between an elite qualifying performance (attaining a front-of-the-grid slot) and a highly favorable race outcome is universally accepted as domain intuition. However, establishing an empirically rigorous, statistically controlled causal link remains a profound analytical challenge due to two fundamental system-wide confounding factors:
+
+\begin{enumerate}
+    \item \textbf{The Constructor Machinery Confound:} In Formula 1, mechanical variance drastically dominates individual driver variance. Historical sports analytics estimates that approximately 70\% to 80\% of the underlying variance in a driver's final placement is directly attributable to the technical capabilities of the constructor car rather than driver talent. For instance, a dominant vehicle fielded by a top-tier team will consistently secure front-row grid slots and subsequential race victories, irrespective of granular driver variance. Any naive statistical regression analyzing grid position advantage without explicitly partitioning and controlling for this underlying constructor performance layer will yield heavily biased, non-causal estimators. 
+    \item \textbf{Historical Evolution of the Governing Regulations:} Over the 76-year timeline of Formula 1 (1950--2026), the sporting regulations, technological packages, and point-scoring structures have undergone massive paradigm shifts. Comparing raw points scored across different decades is statistically invalid; a race victory was capped at 9 points in 1950, shifted to 10 points in 1991, and expanded to 25 points from 2010 onward (augmented by modern sprint races and fastest-lap bonuses). A robust inferential framework must neutralize this historical variance by scaling outcomes on an era-invariant metric.
+\end{enumerate}
+
+\noindent To address these structural anomalies, this project leverages a dual-control identification strategy: first, we implement a robust engineering design by computing a highly localized \textit{Constructor Strength Index} to explicitly absorb the machinery confound; second, we scale finishing distributions to evaluate non-linear decay patterns across distinct track architectures. 
+
+\subsection{Research Questions}
+\label{subsec:research_questions}
+
+To rigorously evaluate the mathematical validity of the $H_2$ hypothesis (The Front of the Grid Advantage), this study formally proposes and resolves four distinct, interrelated Research Questions (RQs):
+
+\begin{itemize}
+    \item \textbf{\textit{RQ1 (Empirical Baseline):}} What is the baseline empirical probability of a competitor securing an outright race victory given that they started from the premier grid slot? That is, what is the exact value of the conditional probability distribution $P(\text{Win} \mid \text{Pole})$ across historical observations?
+    \item \textbf{\textit{RQ2 (Era-Specific Performance Stratification):}} Do drivers who qualify within the elite top 5 (\textit{``front of the grid''}) secure significantly higher point hauls and finish with a systematically superior placement profile compared to those relegated to positions P6--P10 (\textit{``midfield''}) during the modern hybrid and ground-effect eras ($\ge 2010$)? 
+    \item \textbf{\textit{RQ3 (Geometrical Interaction Effects):}} Is the structural advantage of a front-row grid position uniform across all competitive environments, or is it heavily moderated by circuit architecture? Specifically, does a narrow, overtaking-prohibitive street circuit (e.g., Monaco) display a significantly tighter, more deterministic grid-to-finish correlation than a wide, high-velocity permanent facility (e.g., Monza)?
+    \item \textbf{\textit{RQ4 (Advantage Decay Modeling):}} If elite track position (Pole) is forfeited, what is the exact mathematical decay rate of a competitor's podium probability ($P(\text{Podium} \mid \text{Grid})$) and average finishing orientation as they cascade backward into lower initial grid slots? At what threshold does the marginal return of qualifying position begin to flatten out into system noise?
+\end{itemize}
+
+\noindent By addressing these questions through a combination of classical statistical inference, Ordinary Least Squares (OLS) interaction terms, and non-parametric predictive machine learning, this paper aims to dissect the structural anatomy of track position advantages in elite motorsport

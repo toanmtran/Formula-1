@@ -1,0 +1,35 @@
+\UseRawInputEncoding
+% ==============================================================================
+% SECTION 7: REPRODUCIBILITY APPENDIX & TECHNICAL SETUP
+% ==============================================================================
+\section{Appendix: Technical Setup and Computational Reproducibility}
+\label{sec:appendix}
+
+To satisfy the modern standards of open-science data analytics and ensure that every empirical estimator, classification metric, and neural network weight can be completely replicated across different hardware setups, the F1 Predictive System enforces a strict reproducibility architecture. This appendix outlines the technical ecosystem, system-wide deterministic constraints, and modular program execution pathways.
+
+\subsection{Software Environment and Dependency Tree}
+\label{subsec:software_env}
+
+The pipeline was developed and compiled inside a localized \texttt{Python 3.11/3.12} runtime environment. The underlying scientific stack consists entirely of open-source, industry-standard mathematical and machine learning libraries. The specific version dependencies utilized by the core execution engine are structured as follows:
+\begin{itemize}
+    \item \textbf{Data Wrangling and Processing:} \texttt{pandas} and \texttt{numpy} for high-performance vectorized matrix manipulations and numeric casting.
+    \item \textbf{Inferential Statistical Modeling:} \texttt{statsmodels} for Ordinary Least Squares (OLS) estimation, interaction term design matrices, and frequentist $p$-value computation.
+    \item \textbf{Shallow Machine Learning:} \texttt{scikit-learn} for stratified training/testing partitioning, Logistic Regression optimization, and class-balanced Random Forest ensemble execution.
+    \item \textbf{Deep Learning Core:} \texttt{tensorflow} and \texttt{keras} for layer-by-layer sequential neural network compiling, optimization, and backpropagation.
+    \item \textbf{Visualization Engine:} \texttt{matplotlib} and \texttt{seaborn} for rendering high-fidelity probability decay charts and line graphs.
+\end{itemize}
+
+\subsection{System Determinism and Pseudo-Random Number Constraints}
+\label{subsec:determinism_constraints}
+
+To neutralize the inherent numerical drift caused by parallelized hardware multi-threading and stochastic initialization vectors, the system implements a core lock via the \texttt{enforce\_determinism()} utility block. Prior to the initialization of any analytical or model-based pipeline, the system binds the global seed value:
+\begin{equation}
+\mathcal{S}_{\text{seed}} = 42
+\end{equation}
+This scalar is programmatically forced onto the following execution layers:
+\begin{enumerate}
+    \item \textbf{Python Hashing Layer:} Bound via the operating system environment wrapper: \texttt{os.environ['PYTHONHASHSEED'] = '42'}.
+    \item \textbf{Core Random Modules:} Direct execution of \texttt{random.seed(42)} and \texttt{numpy.random.seed(42)} to govern cross-validation and random split initializations.
+    \item \textbf{TensorFlow Execution Layer:} Sealed via \texttt{tf.random.set\_seed(42)} to freeze the pseudorandom matrix weights of the LSTM recurrent cells.
+    \item \textbf{Hardware Op Determinism:} Crucially, to mitigate the erratic numeric fluctuations characteristic of multi-core CPU and GPU operations, the pipeline invokes \texttt{tf.config.experimental.enable\_op\_determinism()}. This parameter forces the hardware level to compute arithmetic operations in a single-threaded, strictly ordered queue. As a result, the deep learning model achieves identical test MAE scores ($2.87$) across repeated runs.
+\end{enumerate}

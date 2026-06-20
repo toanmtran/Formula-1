@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+
+% ==============================================================================
+% 1. PACKAGES & LAYOUT CONFIGURATION
+% ==============================================================================
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel} % Standard academic English hyphenation and titles
+\usepackage{amsmath, amssymb, amsthm} % Advanced mathematical and statistical packages
+\usepackage{geometry} % Layout margins setting
+\geometry{top=25mm, bottom=25mm, left=30mm, right=25mm}
+\usepackage{graphicx} % Graphics embedding (plots, heatmaps)
+\usepackage{booktabs} % Publication-quality tables (\toprule, \midrule, \bottomrule)
+\usepackage{array} % Advanced column formatting for tabular environments
+\usepackage{hyperref} % Interactive internal and external hyperlinks
+\usepackage{titlesec} % Custom layout section headings
+\usepackage{listings} % For formatting python/SQL source codes if required
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{microtype} % Typography optimization for justification and spacing
+
+% Professional hyperlink styling
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!50!black,
+    citecolor=green!50!black,
+    urlcolor=teal
+}
+
+% Clean and professional section titles formatting
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% ==============================================================================
+% 2. DOCUMENT METADATA
+% ==============================================================================
+\title{
+    \vspace{-15mm}
+    \textbf{\large APPLIED STATISTICS \& MACHINE LEARNING PROJECT REPORT}\\
+    \vspace{5mm}
+    \LARGE \textbf{The Architecture of Track Position: Quantifying the Predictive Power and Decay of Starting Grid Advantage in Formula 1 (1950--2026)}
+}
+\author{
+    \textit{School of Computer Science and Engineering (SoICT)} \\
+    \textit{Hanoi University of Science and Technology (HUST)}
+}
+\date{\today}
+
+% ==============================================================================
+% 3. MAIN DOCUMENT CONTENT
+% ==============================================================================
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent This study systematically quantifies the predictive power of qualifying positions (starting grid slots) on final race outcomes, serving as an empirical validation of the $H_2$ hypothesis (The Front of the Grid Advantage). Utilizing the historical Ergast Formula 1 dataset spanning 1950 to 2026 with 25,646 valid driver-race observations, we implement a rigorous multi-tiered triangulation analytical pipeline designed to isolate systemic confounding factors, most notably the constructor machinery advantage (machinery confound). The research is deployed across three core operational phases: (i) modern era exploratory data analysis (EDA) computing the exact rate of advantage decay; (ii) classical inferential modeling using Ordinary Least Squares (OLS) regression featuring an interaction term between grid slots and track geometry typology (Street vs. Permanent circuits); and (iii) a dual predictive system blending a non-parametric machine learning model (Random Forest Classifier) with a deep sequential neural network (LSTM).
+
+\noindent The empirical results reveal that the empirical conditional probability of winning a race from Pole Position stands at a striking $P(\text{Win} \mid \text{Pole}) = 43.03\%$. The OLS interaction model shows that baseline grid positions exert a dominant, statistically significant impact on finishing orders ($\beta_{\text{grid}} = 0.4457$, $p < 0.001$). However, the street interaction coefficient ($\beta_{\text{grid} \times \text{street}} = 0.0278$, $p = 0.152$) does not cross the standard $5\%$ significance threshold, prompting critical domain-specific discussion regarding modern aerodynamic evolutions. Finally, the deep learning LSTM network demonstrates robust out-of-sample generalization in predicting actual final placements, achieving a stable test Mean Absolute Error (MAE) of $2.87$ positions. System-wide deterministic constraints were enforced to ensure full computational reproducibility ($Seed = 42$).
+\end{abstract}
+
+\vspace{5mm}
+\vspace{10mm}
+
+\newpage
+\tableofcontents % Automatically generates the table of contents
+
+% ==============================================================================
+% 4. SUB-SECTIONS INCLUSION (MODULAR ARCHITECTURE)
+% ==============================================================================
+% Note: Ensure empty .tex files with the exact names below are created in the same directory.
+
+\include{section1_motivation}      % Section 1: Motivation & Research Questions
+\include{section2_data_features}   % Section 2: Data Pipeline & Feature Engineering
+\include{section3_eda_decay}       % Section 3: Exploratory Data Analysis & Advantage Decay
+\include{section4_ols_interaction} % Section 4: Inferential OLS Interaction Modeling
+\include{section5_predictive_ml}   % Section 5: Predictive Modeling (Random Forest & LSTM)
+\include{section6_discussion}       % Section 6: Convergent Discussion & Limitations
+\include{section7_appendix}         % Section 7: Reproducibility Appendix & Technical Setup
+
+\end{document}

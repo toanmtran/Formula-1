@@ -1,0 +1,31 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Applied Statistics on Formula 1 — consolidated requirements
+# Tested with Python 3.11.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Core scientific stack — used by all four subprojects
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.7
+seaborn>=0.13
+
+# Stats & ML — shared
+statsmodels>=0.14
+scikit-learn>=1.3
+joblib>=1.3
+xgboost>=2.0
+shap>=0.43
+lifelines>=0.27          # Cox proportional hazards (pit_stop_strategy)
+
+# Deep learning
+# torch is required by pit_stop_strategy (BiLSTM). Install the build that
+# matches your CUDA / CPU setup — see https://pytorch.org/get-started/.
+torch>=2.0
+
+# tensorflow is required by starting_grid_advantage (LSTM regression).
+tensorflow>=2.13
+
+# pit_stop_strategy data acquisition (slow API — only needed if regenerating
+# the FastF1 dataset from scratch).
+fastf1>=3.0

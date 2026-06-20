@@ -1,0 +1,26 @@
+name: applied_stats
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # Core scientific stack
+      - numpy>=1.26
+      - pandas>=2.0
+      - scipy>=1.11
+      - matplotlib>=3.7
+      - seaborn>=0.13
+      # Statistics / classical ML
+      - statsmodels>=0.14
+      - scikit-learn>=1.3
+      - joblib>=1.3
+      - xgboost>=2.0
+      - shap>=0.43
+      - lifelines>=0.27
+      # Deep learning (pit_stop_strategy / starting_grid_advantage)
+      - torch>=2.0
+      - tensorflow>=2.13
+      # FastF1 (only needed to regenerate the pit_stop_strategy dataset)
+      - fastf1>=3.0

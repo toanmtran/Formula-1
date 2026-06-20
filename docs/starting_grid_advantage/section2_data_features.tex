@@ -1,0 +1,65 @@
+% ==============================================================================
+% SECTION 2: DATA PIPELINE & FEATURE ENGINEERING
+% ==============================================================================
+\section{Data Pipeline and Feature Engineering}
+\label{sec:data_pipeline}
+
+To establish an empirically sound analysis capable of validating the $H_2$ hypothesis, a robust data pipeline was constructed to clean, filter, relational-merge, and mathematically transform the underlying historical observations. This section details the data extraction pipeline and the exact mathematical formulations of the engineered feature space used across both the inferential and predictive models.
+
+\subsection{Data Extraction and Cleaning Pipeline}
+\label{subsec:data_pipeline_detail}
+
+The foundational source data is extracted from the open-source relational Ergast Formula 1 database, which natively aggregates historical racing metrics across multiple entities. The pipeline executes an inner-join strategy across three primary relational tables: \texttt{results.csv}, \texttt{races.csv}, and \texttt{circuits.csv}, utilizing \texttt{raceId} and \texttt{circuitId} as the primary relational foreign keys. 
+
+To ensure the statistical validity of the spatial analysis, specific data cleaning constraints are strictly enforced at the hardware runtime layer:
+\begin{enumerate}
+    \item \textbf{Numeric Casting and Missing Data Resolution:} Critical target and covariate fields—specifically \texttt{grid}, \texttt{positionOrder}, and \texttt{points}—are dynamically cast into numeric types. Missing values or historical empty strings recorded under legacy notations (e.g., \texttt{\textbackslash N}) are systematically converted to \texttt{NaN} values. Rows exhibiting complete data omission within these core fields are rejected.
+    \item \textbf{Pit-Lane Start Omission:} Any driver-race observation where the competitor initiated the Grand Prix from the pit lane ($\text{Grid} = 0$) is programmatically filtered out. This exclusion is a necessary domain constraint, as our structural analysis focuses strictly on the physical, grid-slot spatial advantage on the starting straight.
+\end{enumerate}
+
+Out of the initial 27,304 historical driver-race observations available in the raw relational database, the cleaning pipeline safely preserves a final analytical sample size of \textbf{25,646 valid, high-integrity observations} spanning the 1950--2026 seasons.
+
+\subsection{Mathematical Feature Space Formulations}
+\label{subsec:feature_engineering_math}
+
+To transform raw historical records into meaningful mathematical arrays suitable for linear inference and machine learning optimization, four customized features were engineered.
+
+\subsubsection{Binary Categorical Target Variable: $\text{is\_podium}$}
+For the classification pipeline tasked with predicting elite podium allocation, the continuous variable representing the final finishing placement (\texttt{positionOrder}) is mapped to a binary subspace. Let $\text{is\_podium}_{i,r}$ represent the target indicator for driver $i$ in race $r$:
+\begin{equation}
+\text{is\_podium}_{i,r} = \begin{cases} 
+1 & \text{if } \text{positionOrder}_{i,r} \le 3 \\ 
+0 & \text{if } \text{positionOrder}_{i,r} > 3 
+\end{cases}
+\end{equation}
+
+\subsubsection{Track Typology Indicator: $\text{is\_street}$}
+To model environmental and structural variations in track geometry, a track typology feature is constructed using domain-expert knowledge. Let $\mathcal{S}$ denote the set of structurally narrow, overtaking-prohibitive street circuits defined in the global configuration layer:
+\begin{equation}
+\mathcal{S} = \{\text{monaco, baku, marina\_bay, jeddah, vegas, miami, albert\_park}\}
+\end{equation}
+The circuit typology indicator $\text{is\_street}_{i,r}$ for a race held at circuit $c(r)$ is formally defined as:
+\begin{equation}
+\text{is\_street}_{i,r} = \begin{cases} 
+1 & \text{if } c(r) \in \mathcal{S} \\ 
+0 & \text{otherwise} 
+\end{cases}
+\end{equation}
+
+\subsubsection{Spatial Interaction Modeling Term: $\text{grid\_x\_street}$ }
+To mathematically verify whether starting track position is significantly more critical on tightly enclosed street tracks than on wide permanent circuits, an interaction term is constructed. This represents the multiplicative cross-product of the initial grid slot and the circuit typology indicator:
+\begin{equation}
+\text{grid\_x\_street}_{i,r} = \text{grid}_{i,r} \times \text{is\_street}_{i,r}
+\end{equation}
+This term is specifically deployed within the ordinary least squares (OLS) framework to isolate and test the slope differential caused by circuit geometry.
+
+\subsubsection{Machinery Control Covariate: $\text{car\_strength\_index}$}
+To effectively isolate the starting track position advantage from the dominant constructor performance layer, the pipeline engineers a localized control index. For every distinct team (constructor), the historical expectation of its finishing performance is evaluated across the dataset. Let $\mathcal{R}_m$ denote the set of all race entries recorded by constructor $m$. The baseline strength index $\text{car\_strength\_index}_{m}$ is defined as the empirical mean of its finishing positions:
+\begin{equation}
+\text{car\_strength\_index}_{m} = \frac{1}{|\mathcal{R}_m|} \sum_{(i,r) \in \mathcal{R}_m} \text{positionOrder}_{i,r}
+\end{equation}
+This constructor-specific scalar is subsequently mapped back onto each driver-race row based on their team alignment:
+\begin{equation}
+\text{car\_strength\_index}_{i,r} = \text{car\_strength\_index}_{m} \quad \text{where } \text{driver } i \in \text{team } m \text{ in race } r
+\end{equation}
+Because lower values in $\text{positionOrder}$ represent superior technical finishes, a lower index value maps directly to a higher mechanical capability. Any potential null vectors resulting from unrecorded historical constructors are safely imputed using the global population mean ($\mu_{\text{strength}}$).
