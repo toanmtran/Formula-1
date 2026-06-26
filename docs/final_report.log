@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2026.6.2)  26 JUN 2026 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2026.6.2)  26 JUN 2026 22:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -555,23 +555,28 @@ Package hyperref Info: Link coloring ON on input line 78.
 \@outlinefile=\write3
 \openout3 = `final_report.out'.
 
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 80.
+<logo-soict-hust-1.png, id=195, 1860.9525pt x 755.82375pt>
+File: logo-soict-hust-1.png Graphic file (type png)
+<use logo-soict-hust-1.png>
+Package pdftex.def Info: logo-soict-hust-1.png  used on input line 88.
+(pdftex.def)             Requested size: 249.13371pt x 101.17836pt.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 80.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 80.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 80.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 80.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -580,35 +585,38 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 80.
+(Font)              scaled to size 12.50409pt on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 80.
+(Font)              scaled to size 9.37807pt on input line 100.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 80.
+(Font)              scaled to size 7.29405pt on input line 100.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 80.
+(Font)              scaled to size 12.50409pt on input line 100.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 80.
+(Font)              scaled to size 9.37807pt on input line 100.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 80.
+(Font)              scaled to size 7.29405pt on input line 100.
+ [1
+
+{C:/Users/LENOVO/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo-soict-hust-1.png>]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 91.
+(Font)              scaled to size 10.42007pt on input line 133.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 91.
+(Font)              scaled to size 7.91925pt on input line 133.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 91.
+(Font)              scaled to size 6.25204pt on input line 133.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 91.
+(Font)              scaled to size 10.42007pt on input line 133.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 91.
+(Font)              scaled to size 7.91925pt on input line 133.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 91.
+(Font)              scaled to size 6.25204pt on input line 133.
  (final_report.toc
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 7.
@@ -618,9 +626,12 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 7.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 7.
- [1
 
-{C:/Users/LENOVO/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.36 ...estion and motivation}{24}{subsection.5.1}
+                                                  % [1]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 46.
  (C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -634,290 +645,241 @@ Package microtype Info: Loading generic protrusion settings for font family
 \openout4 = `final_report.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-\T1/ppl/m/n/10 (+20) dom-i-nate; Gamma
- []
-
-
-Underfull \hbox (badness 1286) in paragraph at lines 122--123
-\T1/ppl/m/n/10 (+20) min-imises AIC on a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-[]|\T1/ppl/m/n/10 (+20) Starting-grid ad-
- []
-
-
-Underfull \hbox (badness 3514) in paragraph at lines 126--127
-[]|$\OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ([] \OMS/zplm/m/n/10 j []\OT1/zplm/m/n/10 ) =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-\OT1/ppl/m/n/10 (+20) 43.0%$\T1/ppl/m/n/10 (+20) ; OLS slope
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
-[]|\T1/ppl/m/n/10 (+20) Era-adjusted team-mate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
-[]|\T1/ppl/m/n/10 (+20) No ag-gre-gate ef-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
-\T1/ppl/m/n/10 (+20) fect ($\OML/zplm/m/it/10 t \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 (+20) 0.65$\T1/ppl/m/n/10 (+20) ,
- []
-
-
-Underfull \hbox (badness 2856) in paragraph at lines 130--131
-\OML/zplm/m/it/10 p \OT1/zplm/m/n/10 = \OT1/ppl/m/n/10 (+20) 0.51$\T1/ppl/m/n/10 (+20) ); sig-nif-i-
- []
-
-
-Underfull \hbox (badness 2126) in paragraph at lines 134--135
-\T1/ppl/m/n/10 (+20) prob. $\OT1/ppl/m/n/10 (+20) 83.8%$ \T1/ppl/m/n/10 (+20) on true
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-[]|$\OT1/ppl/m/n/10 (+20) 152[]475$ \T1/ppl/m/n/10 (+20) laps, $\OT1/ppl/m/n/10 (+20) 2018$\T1/ppl/m/n/10 (+20) --
+Overfull \hbox (2.70042pt too wide) in paragraph at lines 158--187
+ [][] 
  []
 
 [2] [3]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 244.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 293.
  (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [4]
-<../outputs/lap_time_distributions/01_overview_histogram.png, id=293, 490.4505pt x 342.954pt>
+<../outputs/lap_time_distributions/01_overview_histogram.png, id=299, 490.4505pt x 342.954pt>
 File: ../outputs/lap_time_distributions/01_overview_histogram.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/01_overview_histogram.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/01_overview_histogram.png  used on input line 324.
+Package pdftex.def Info: ../outputs/lap_time_distributions/01_overview_histogram.png  used on input line 373.
 (pdftex.def)             Requested size: 371.43698pt x 259.73718pt.
- [5]
 <../outputs/lap_time_distributions/02_overview_aic_bic.png, id=301, 483.552pt x 341.3115pt>
 File: ../outputs/lap_time_distributions/02_overview_aic_bic.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/02_overview_aic_bic.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/02_overview_aic_bic.png  used on input line 335.
+Package pdftex.def Info: ../outputs/lap_time_distributions/02_overview_aic_bic.png  used on input line 384.
 (pdftex.def)             Requested size: 371.43698pt x 262.1857pt.
-<../outputs/lap_time_distributions/04_overview_cdf.png, id=302, 474.6825pt x 342.954pt>
+ [5 <../outputs/lap_time_distributions/01_overview_histogram.png>]
+<../outputs/lap_time_distributions/04_overview_cdf.png, id=309, 474.6825pt x 342.954pt>
 File: ../outputs/lap_time_distributions/04_overview_cdf.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/04_overview_cdf.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/04_overview_cdf.png  used on input line 343.
+Package pdftex.def Info: ../outputs/lap_time_distributions/04_overview_cdf.png  used on input line 392.
 (pdftex.def)             Requested size: 371.43698pt x 268.37172pt.
- [6 <../outputs/lap_time_distributions/01_overview_histogram.png> <../outputs/lap_time_distributions/02_overview_aic_bic.png>]
-<../outputs/lap_time_distributions/11_circuit_monza.png, id=313, 474.6825pt x 342.954pt>
+ [6 <../outputs/lap_time_distributions/02_overview_aic_bic.png> <../outputs/lap_time_distributions/04_overview_cdf.png>]
+<../outputs/lap_time_distributions/11_circuit_monza.png, id=322, 474.6825pt x 342.954pt>
 File: ../outputs/lap_time_distributions/11_circuit_monza.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/11_circuit_monza.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/11_circuit_monza.png  used on input line 395.
+Package pdftex.def Info: ../outputs/lap_time_distributions/11_circuit_monza.png  used on input line 444.
 (pdftex.def)             Requested size: 353.31439pt x 255.27863pt.
- [7 <../outputs/lap_time_distributions/04_overview_cdf.png>]
-<../outputs/lap_time_distributions/12_circuit_monaco.png, id=324, 480.5955pt x 342.6255pt>
+<../outputs/lap_time_distributions/12_circuit_monaco.png, id=323, 480.5955pt x 342.6255pt>
 File: ../outputs/lap_time_distributions/12_circuit_monaco.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/12_circuit_monaco.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/12_circuit_monaco.png  used on input line 404.
+Package pdftex.def Info: ../outputs/lap_time_distributions/12_circuit_monaco.png  used on input line 453.
 (pdftex.def)             Requested size: 353.31439pt x 251.88159pt.
- [8 <../outputs/lap_time_distributions/11_circuit_monza.png> <../outputs/lap_time_distributions/12_circuit_monaco.png>]
-<../outputs/lap_time_distributions/14_era_v10.png, id=335, 474.6825pt x 342.6255pt>
+ [7 <../outputs/lap_time_distributions/11_circuit_monza.png>]
+<../outputs/lap_time_distributions/14_era_v10.png, id=334, 474.6825pt x 342.6255pt>
 File: ../outputs/lap_time_distributions/14_era_v10.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/14_era_v10.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/14_era_v10.png  used on input line 453.
+Package pdftex.def Info: ../outputs/lap_time_distributions/14_era_v10.png  used on input line 502.
 (pdftex.def)             Requested size: 353.31439pt x 255.0341pt.
-<../outputs/lap_time_distributions/15_era_v8.png, id=336, 474.6825pt x 342.6255pt>
+ [8 <../outputs/lap_time_distributions/12_circuit_monaco.png>]
+<../outputs/lap_time_distributions/15_era_v8.png, id=343, 474.6825pt x 342.6255pt>
 File: ../outputs/lap_time_distributions/15_era_v8.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/15_era_v8.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/15_era_v8.png  used on input line 461.
+Package pdftex.def Info: ../outputs/lap_time_distributions/15_era_v8.png  used on input line 510.
 (pdftex.def)             Requested size: 353.31439pt x 255.0341pt.
- [9 <../outputs/lap_time_distributions/14_era_v10.png>]
 <../outputs/lap_time_distributions/16_era_hybrid.png, id=344, 480.5955pt x 342.954pt>
 File: ../outputs/lap_time_distributions/16_era_hybrid.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/16_era_hybrid.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/16_era_hybrid.png  used on input line 469.
+Package pdftex.def Info: ../outputs/lap_time_distributions/16_era_hybrid.png  used on input line 518.
 (pdftex.def)             Requested size: 353.31439pt x 252.12311pt.
-<../outputs/lap_time_distributions/17_era_ground.png, id=345, 474.6825pt x 342.6255pt>
+ [9 <../outputs/lap_time_distributions/14_era_v10.png> <../outputs/lap_time_distributions/15_era_v8.png>]
+<../outputs/lap_time_distributions/17_era_ground.png, id=352, 474.6825pt x 342.6255pt>
 File: ../outputs/lap_time_distributions/17_era_ground.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/17_era_ground.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/17_era_ground.png  used on input line 476.
+Package pdftex.def Info: ../outputs/lap_time_distributions/17_era_ground.png  used on input line 525.
 (pdftex.def)             Requested size: 353.31439pt x 255.0341pt.
- [10 <../outputs/lap_time_distributions/15_era_v8.png> <../outputs/lap_time_distributions/16_era_hybrid.png>]
-<../outputs/lap_time_distributions/18_skewness_summary.png, id=357, 620.5365pt x 353.7945pt>
+ [10 <../outputs/lap_time_distributions/16_era_hybrid.png> <../outputs/lap_time_distributions/17_era_ground.png>]
+<../outputs/lap_time_distributions/18_skewness_summary.png, id=364, 620.5365pt x 353.7945pt>
 File: ../outputs/lap_time_distributions/18_skewness_summary.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/18_skewness_summary.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/18_skewness_summary.png  used on input line 520.
+Package pdftex.def Info: ../outputs/lap_time_distributions/18_skewness_summary.png  used on input line 569.
 (pdftex.def)             Requested size: 385.02547pt x 219.51767pt.
- [11 <../outputs/lap_time_distributions/17_era_ground.png>]
-<../outputs/lap_time_distributions/19_best_fit_pie.png, id=366, 368.9055pt x 346.239pt>
+<../outputs/lap_time_distributions/19_best_fit_pie.png, id=365, 368.9055pt x 346.239pt>
 File: ../outputs/lap_time_distributions/19_best_fit_pie.png Graphic file (type png)
 <use ../outputs/lap_time_distributions/19_best_fit_pie.png>
-Package pdftex.def Info: ../outputs/lap_time_distributions/19_best_fit_pie.png  used on input line 529.
+Package pdftex.def Info: ../outputs/lap_time_distributions/19_best_fit_pie.png  used on input line 578.
 (pdftex.def)             Requested size: 280.83788pt x 263.59871pt.
- [12 <../outputs/lap_time_distributions/18_skewness_summary.png> <../outputs/lap_time_distributions/19_best_fit_pie.png>]
-<../outputs/starting_grid_advantage/plots/01_podium_decay.png, id=374, 867.24pt x 433.62pt>
+ [11 <../outputs/lap_time_distributions/18_skewness_summary.png>] [12 <../outputs/lap_time_distributions/19_best_fit_pie.png>]
+<../outputs/starting_grid_advantage/plots/01_podium_decay.png, id=383, 867.24pt x 433.62pt>
 File: ../outputs/starting_grid_advantage/plots/01_podium_decay.png Graphic file (type png)
 <use ../outputs/starting_grid_advantage/plots/01_podium_decay.png>
-Package pdftex.def Info: ../outputs/starting_grid_advantage/plots/01_podium_decay.png  used on input line 586.
+Package pdftex.def Info: ../outputs/starting_grid_advantage/plots/01_podium_decay.png  used on input line 635.
 (pdftex.def)             Requested size: 385.02547pt x 192.51367pt.
-<../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png, id=376, 867.24pt x 433.62pt>
+<../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png, id=385, 867.24pt x 433.62pt>
 File: ../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png Graphic file (type png)
 <use ../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png>
-Package pdftex.def Info: ../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png  used on input line 599.
+Package pdftex.def Info: ../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png  used on input line 648.
 (pdftex.def)             Requested size: 385.02547pt x 192.51367pt.
- [13 <../outputs/starting_grid_advantage/plots/01_podium_decay.png>] [14 <../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png>] [15]
-<../outputs/home_advantage/figures/01_teammate_delta_hist.png, id=407, 549.252pt x 362.70506pt>
+ [13 <../outputs/starting_grid_advantage/plots/01_podium_decay.png> <../outputs/starting_grid_advantage/plots/02_mean_finish_decay.png>] [14] [15]
+<../outputs/home_advantage/figures/01_teammate_delta_hist.png, id=412, 549.252pt x 362.70506pt>
 File: ../outputs/home_advantage/figures/01_teammate_delta_hist.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/01_teammate_delta_hist.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/01_teammate_delta_hist.png  used on input line 796.
+Package pdftex.def Info: ../outputs/home_advantage/figures/01_teammate_delta_hist.png  used on input line 845.
 (pdftex.def)             Requested size: 326.13744pt x 215.36667pt.
- [16]
-Overfull \hbox (5.30981pt too wide) in paragraph at lines 805--808
+
+Overfull \hbox (5.30981pt too wide) in paragraph at lines 854--857
 []\T1/ppl/m/n/10.95 (-20) For driver $\OML/zplm/m/it/10.95 i$ \T1/ppl/m/n/10.95 (-20) let $\OML/zplm/m/it/10.95 y[]$ \T1/ppl/m/n/10.95 (-20) be the year of the first recorded start. Then $[][] \OT1/zplm/m/n/10.95 =
  []
 
-<../outputs/home_advantage/figures/05_circuit_crash_rates.png, id=416, 618.36018pt x 415.10081pt>
+[16 <../outputs/home_advantage/figures/01_teammate_delta_hist.png>]
+<../outputs/home_advantage/figures/05_circuit_crash_rates.png, id=422, 618.36018pt x 415.10081pt>
 File: ../outputs/home_advantage/figures/05_circuit_crash_rates.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/05_circuit_crash_rates.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/05_circuit_crash_rates.png  used on input line 824.
+Package pdftex.def Info: ../outputs/home_advantage/figures/05_circuit_crash_rates.png  used on input line 873.
 (pdftex.def)             Requested size: 385.02547pt x 258.46828pt.
-[17 <../outputs/home_advantage/figures/01_teammate_delta_hist.png>]
 <../outputs/home_advantage/figures/04_top_nationalities.png, id=424, 620.16693pt x 359.54324pt>
 File: ../outputs/home_advantage/figures/04_top_nationalities.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/04_top_nationalities.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/04_top_nationalities.png  used on input line 843.
+Package pdftex.def Info: ../outputs/home_advantage/figures/04_top_nationalities.png  used on input line 892.
 (pdftex.def)             Requested size: 353.31439pt x 204.83754pt.
- [18 <../outputs/home_advantage/figures/05_circuit_crash_rates.png> <../outputs/home_advantage/figures/04_top_nationalities.png>]
-Overfull \hbox (23.8479pt too wide) in paragraph at lines 857--866
+ [17 <../outputs/home_advantage/figures/05_circuit_crash_rates.png>]
+Overfull \hbox (23.8479pt too wide) in paragraph at lines 906--915
 []\T1/ppl/m/n/10.95 (-20) Across $\OML/zplm/m/it/10.95 n \OT1/zplm/m/n/10.95 = \OT1/ppl/m/n/10.95 (-20) 440$ \T1/ppl/m/n/10.95 (-20) paired drivers, the mean dif-fer-ence is $[] \OT1/zplm/m/n/10.95 = +\OT1/ppl/m/n/10.95 (-20) 0.00265$ \T1/ppl/m/n/10.95 (-20) ($\OT1/ppl/m/n/10.95 (-20) 95%$ \T1/ppl/m/n/10.95 (-20) CI $\OT1/zplm/m/n/10.95 [\OMS/zplm/m/n/10.95 ^^@\OT1/ppl/m/n/10.95 (-20) 0.00534, \OT1/zplm/m/n/10.95 +\OT1/ppl/m/n/10.95 (-20) 0.01064\OT1/zplm/m/n/10.95 ]$\T1/ppl/m/n/10.95 (-20) ),
  []
 
 <../outputs/home_advantage/figures/02_home_vs_away_box.png, id=434, 486.46744pt x 339.21732pt>
 File: ../outputs/home_advantage/figures/02_home_vs_away_box.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/02_home_vs_away_box.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/02_home_vs_away_box.png  used on input line 871.
+Package pdftex.def Info: ../outputs/home_advantage/figures/02_home_vs_away_box.png  used on input line 920.
 (pdftex.def)             Requested size: 221.95676pt x 154.77373pt.
 <../outputs/home_advantage/figures/03_home_vs_away_meanci.png, id=435, 436.78181pt x 339.21732pt>
 File: ../outputs/home_advantage/figures/03_home_vs_away_meanci.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/03_home_vs_away_meanci.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/03_home_vs_away_meanci.png  used on input line 877.
+Package pdftex.def Info: ../outputs/home_advantage/figures/03_home_vs_away_meanci.png  used on input line 926.
 (pdftex.def)             Requested size: 221.95676pt x 172.38258pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 878.
+(Font)              scaled to size 5.21004pt on input line 927.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 878.
+(Font)              scaled to size 5.21004pt on input line 927.
 <../outputs/home_advantage/figures/07_paired_diff_hist.png, id=436, 522.60243pt x 367.67363pt>
 File: ../outputs/home_advantage/figures/07_paired_diff_hist.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/07_paired_diff_hist.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/07_paired_diff_hist.png  used on input line 887.
+Package pdftex.def Info: ../outputs/home_advantage/figures/07_paired_diff_hist.png  used on input line 936.
 (pdftex.def)             Requested size: 326.13744pt x 229.45322pt.
-<../outputs/home_advantage/figures/06_per_driver_effect.png, id=438, 631.45912pt x 528.47438pt>
+[18 <../outputs/home_advantage/figures/04_top_nationalities.png> <../outputs/home_advantage/figures/02_home_vs_away_box.png> <../outputs/home_advantage/figures/03_home_vs_away_meanci.png>]
+<../outputs/home_advantage/figures/06_per_driver_effect.png, id=448, 631.45912pt x 528.47438pt>
 File: ../outputs/home_advantage/figures/06_per_driver_effect.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/06_per_driver_effect.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/06_per_driver_effect.png  used on input line 901.
+Package pdftex.def Info: ../outputs/home_advantage/figures/06_per_driver_effect.png  used on input line 950.
 (pdftex.def)             Requested size: 385.02547pt x 322.23987pt.
-[19 <../outputs/home_advantage/figures/02_home_vs_away_box.png> <../outputs/home_advantage/figures/03_home_vs_away_meanci.png> <../outputs/home_advantage/figures/07_paired_diff_hist.png>]
-Overfull \hbox (9.88374pt too wide) in paragraph at lines 918--923
+ [19 <../outputs/home_advantage/figures/07_paired_diff_hist.png>]
+Overfull \hbox (9.88374pt too wide) in paragraph at lines 967--972
 \T1/ppl/m/n/10.95 (-20) with $\OML/zplm/m/it/10.95 u[] \OMS/zplm/m/n/10.95 ^^X N\OT1/zplm/m/n/10.95 (\OT1/ppl/m/n/10.95 (-20) 0, \OML/zplm/m/it/10.95 ^^[[]\OT1/zplm/m/n/10.95 )$ \T1/ppl/m/n/10.95 (-20) in-de-pen-dent of $\OML/zplm/m/it/10.95 "[] \OMS/zplm/m/n/10.95 ^^X N\OT1/zplm/m/n/10.95 (\OT1/ppl/m/n/10.95 (-20) 0, \OML/zplm/m/it/10.95 ^^[[]\OT1/zplm/m/n/10.95 )$\T1/ppl/m/n/10.95 (-20) . Es-ti-ma-tion is by REML in \T1/cmtt/m/n/10 statsmodels.MixedLM\T1/ppl/m/n/10.95 (-20) .
  []
 
 [20 <../outputs/home_advantage/figures/06_per_driver_effect.png>]
-<../outputs/home_advantage/figures/08_mixedlm_marginal.png, id=460, 542.47668pt x 359.54324pt>
+<../outputs/home_advantage/figures/08_mixedlm_marginal.png, id=465, 542.47668pt x 359.54324pt>
 File: ../outputs/home_advantage/figures/08_mixedlm_marginal.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/08_mixedlm_marginal.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/08_mixedlm_marginal.png  used on input line 964.
+Package pdftex.def Info: ../outputs/home_advantage/figures/08_mixedlm_marginal.png  used on input line 1013.
 (pdftex.def)             Requested size: 326.13744pt x 216.15552pt.
  [21 <../outputs/home_advantage/figures/08_mixedlm_marginal.png>]
-<../outputs/home_advantage/figures/13_backtest_folds.png, id=478, 536.60475pt x 343.2825pt>
+<../outputs/home_advantage/figures/13_backtest_folds.png, id=483, 536.60475pt x 343.2825pt>
 File: ../outputs/home_advantage/figures/13_backtest_folds.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/13_backtest_folds.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/13_backtest_folds.png  used on input line 1014.
+Package pdftex.def Info: ../outputs/home_advantage/figures/13_backtest_folds.png  used on input line 1063.
 (pdftex.def)             Requested size: 353.31439pt x 226.02762pt.
-<../outputs/home_advantage/figures/09_xgb_importance.png, id=479, 570.02963pt x 303.98569pt>
+<../outputs/home_advantage/figures/09_xgb_importance.png, id=484, 570.02963pt x 303.98569pt>
 File: ../outputs/home_advantage/figures/09_xgb_importance.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/09_xgb_importance.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/09_xgb_importance.png  used on input line 1022.
+Package pdftex.def Info: ../outputs/home_advantage/figures/09_xgb_importance.png  used on input line 1071.
 (pdftex.def)             Requested size: 317.07614pt x 169.09439pt.
-<../outputs/home_advantage/figures/11_shap_dependence_exp_home.png, id=480, 482.40225pt x 336.0555pt>
+<../outputs/home_advantage/figures/11_shap_dependence_exp_home.png, id=485, 482.40225pt x 336.0555pt>
 File: ../outputs/home_advantage/figures/11_shap_dependence_exp_home.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/11_shap_dependence_exp_home.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/11_shap_dependence_exp_home.png  used on input line 1030.
+Package pdftex.def Info: ../outputs/home_advantage/figures/11_shap_dependence_exp_home.png  used on input line 1079.
 (pdftex.def)             Requested size: 326.13744pt x 227.20712pt.
  [22 <../outputs/home_advantage/figures/13_backtest_folds.png> <../outputs/home_advantage/figures/09_xgb_importance.png>]
-<../outputs/home_advantage/figures/10_shap_beeswarm.png, id=488, 530.28113pt x 199.19418pt>
+<../outputs/home_advantage/figures/10_shap_beeswarm.png, id=493, 530.28113pt x 199.19418pt>
 File: ../outputs/home_advantage/figures/10_shap_beeswarm.png Graphic file (type png)
 <use ../outputs/home_advantage/figures/10_shap_beeswarm.png>
-Package pdftex.def Info: ../outputs/home_advantage/figures/10_shap_beeswarm.png  used on input line 1040.
+Package pdftex.def Info: ../outputs/home_advantage/figures/10_shap_beeswarm.png  used on input line 1089.
 (pdftex.def)             Requested size: 339.72592pt x 127.6206pt.
  [23 <../outputs/home_advantage/figures/11_shap_dependence_exp_home.png> <../outputs/home_advantage/figures/10_shap_beeswarm.png>]
-Overfull \hbox (43.0867pt too wide) in paragraph at lines 1115--1120
+Overfull \hbox (43.0867pt too wide) in paragraph at lines 1164--1169
 \T1/cmtt/m/n/10 PitOutTime\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10 LapTime\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10 Sector1-3Time\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10 SessionTime\T1/ppl/m/n/10.95 (-20) ) are dropped be-fore mod-elling. The \T1/cmtt/m/n/10 historical_pit_lap
  []
 
-<../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png, id=500, 532.8708pt x 342.5598pt>
+<../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png, id=505, 532.8708pt x 342.5598pt>
 File: ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png  used on input line 1134.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png  used on input line 1183.
 (pdftex.def)             Requested size: 385.02547pt x 247.52621pt.
 [24] [25 <../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png>]
-<../outputs/pit_stop_strategy/plots/04a_risk_scatter.png, id=522, 406.1574pt x 468.7914pt>
+<../outputs/pit_stop_strategy/plots/04a_risk_scatter.png, id=527, 406.1574pt x 468.7914pt>
 File: ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png  used on input line 1236.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png  used on input line 1285.
 (pdftex.def)             Requested size: 371.43698pt x 428.71103pt.
  [26]
-<../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png, id=528, 429.2838pt x 468.3096pt>
+<../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png, id=533, 429.2838pt x 468.3096pt>
 File: ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png  used on input line 1246.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png  used on input line 1295.
 (pdftex.def)             Requested size: 371.43698pt x 405.20372pt.
  [27 <../outputs/pit_stop_strategy/plots/04a_risk_scatter.png>]
-<../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png, id=535, 438.438pt x 468.3096pt>
+<../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png, id=540, 438.438pt x 468.3096pt>
 File: ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png  used on input line 1255.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png  used on input line 1304.
 (pdftex.def)             Requested size: 371.43698pt x 396.7645pt.
  [28 <../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png>] [29 <../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png>]
-<../outputs/pit_stop_strategy/plots/05a_position_changes.png, id=551, 526.6074pt x 342.5598pt>
+<../outputs/pit_stop_strategy/plots/05a_position_changes.png, id=556, 526.6074pt x 342.5598pt>
 File: ../outputs/pit_stop_strategy/plots/05a_position_changes.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/05a_position_changes.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05a_position_changes.png  used on input line 1310.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05a_position_changes.png  used on input line 1359.
 (pdftex.def)             Requested size: 371.43698pt x 241.6249pt.
-<../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png, id=552, 521.7894pt x 342.5598pt>
+<../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png, id=557, 521.7894pt x 342.5598pt>
 File: ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png  used on input line 1319.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png  used on input line 1368.
 (pdftex.def)             Requested size: 416.72963pt x 273.58821pt.
  [30 <../outputs/pit_stop_strategy/plots/05a_position_changes.png>]
-<../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png, id=561, 537.6888pt x 343.0416pt>
+<../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png, id=567, 537.6888pt x 343.0416pt>
 File: ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png  used on input line 1354.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png  used on input line 1403.
 (pdftex.def)             Requested size: 371.43698pt x 236.98683pt.
  [31 <../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png>]
-<../outputs/pit_stop_strategy/plots/06a_corr_matrix.png, id=569, 470.2368pt x 404.712pt>
+<../outputs/pit_stop_strategy/plots/06a_corr_matrix.png, id=574, 470.2368pt x 404.712pt>
 File: ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png  used on input line 1364.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png  used on input line 1414.
 (pdftex.def)             Requested size: 371.43698pt x 319.6881pt.
-<../outputs/pit_stop_strategy/plots/07a_hazard_rate.png, id=570, 531.9072pt x 343.0416pt>
+ [32 <../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png>]
+<../outputs/pit_stop_strategy/plots/07a_hazard_rate.png, id=581, 531.9072pt x 343.0416pt>
 File: ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png  used on input line 1378.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png  used on input line 1431.
 (pdftex.def)             Requested size: 371.43698pt x 239.56215pt.
- [32 <../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png> <../outputs/pit_stop_strategy/plots/06a_corr_matrix.png>]
-<../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png, id=579, 527.0892pt x 343.0416pt>
+ [33 <../outputs/pit_stop_strategy/plots/06a_corr_matrix.png>]
+<../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png, id=588, 527.0892pt x 343.0416pt>
 File: ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png  used on input line 1387.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png  used on input line 1440.
 (pdftex.def)             Requested size: 371.43698pt x 241.75012pt.
- [33 <../outputs/pit_stop_strategy/plots/07a_hazard_rate.png> <../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png>] [34]
-Overfull \hbox (19.67006pt too wide) in paragraph at lines 1509--1520
+ [34 <../outputs/pit_stop_strategy/plots/07a_hazard_rate.png> <../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png>] [35]
+Overfull \hbox (19.67006pt too wide) in paragraph at lines 1562--1573
 \T1/ppl/m/n/10.95 (-20) seeds are fixed to $\OT1/ppl/m/n/10.95 (-20) 42$ \T1/ppl/m/n/10.95 (-20) through-out. For Ten-sor-Flow, \T1/cmtt/m/n/10 tf.config.experimental.enable_op_determinism()
  []
 
-[35] (final_report.aux)
+[36] (final_report.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -926,17 +888,17 @@ Package rerunfilecheck Info: File `final_report.out' has not changed.
 (rerunfilecheck)             Checksum: 80B7E8314F23D4DBECA662B016025522;9192.
  ) 
 Here is how much of TeX's memory you used:
- 18362 strings out of 475248
- 302508 string characters out of 5767626
- 1934785 words of memory out of 5000000
- 38854 multiletter control sequences out of 15000+600000
- 649828 words of font info for 558 fonts, out of 8000000 for 9000
+ 18431 strings out of 475248
+ 303373 string characters out of 5767626
+ 1935785 words of memory out of 5000000
+ 38871 multiletter control sequences out of 15000+600000
+ 657595 words of font info for 592 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,79p,1039b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on final_report.pdf (35 pages, 3124145 bytes).
+Output written on final_report.pdf (37 pages, 3249953 bytes).
 PDF statistics:
- 785 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 111152 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 797 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 500000)
+ 127541 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -1,33 +1,33 @@
 \babel@toc {english}{}\relax 
 \contentsline {paragraph}{Headline numbers.}{2}{paragraph*.1}%
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
 \contentsline {paragraph}{Data overview.}{3}{paragraph*.3}%
-\contentsline {paragraph}{Notation.}{4}{paragraph*.4}%
-\contentsline {section}{\numberline {2}Lap-Time Distributions}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Question and motivation}{4}{subsection.2.1}%
+\contentsline {paragraph}{Notation.}{3}{paragraph*.4}%
+\contentsline {section}{\numberline {2}Lap-Time Distributions}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Question and motivation}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data and cleaning}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Candidate distributions}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Candidate distributions}{4}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}How we judge a fit}{5}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Deep dive: 2023 Italian Grand Prix}{5}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Cross-circuit comparison}{7}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Cross-era comparison at Monza}{9}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.7}Cross-era comparison at Monza}{8}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}Synthesis: why right-skew is the rule}{11}{subsection.2.8}%
-\contentsline {section}{\numberline {3}Starting-Grid Advantage}{13}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Question and motivation}{13}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Data}{13}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Starting-Grid Advantage}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Question and motivation}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Data}{12}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Empirical baseline: pole conversion}{13}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Probability decay across the grid}{13}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Modern-era stratification}{14}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}OLS with a street-circuit interaction}{14}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Predictive models}{15}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.7}Predictive models}{14}{subsection.3.7}%
 \contentsline {paragraph}{LSTM regression of finishing position.}{15}{paragraph*.26}%
 \contentsline {subsection}{\numberline {3.8}Discussion and limitations}{15}{subsection.3.8}%
-\contentsline {section}{\numberline {4}Home-Race Advantage}{16}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Question and motivation}{16}{subsection.4.1}%
+\contentsline {section}{\numberline {4}Home-Race Advantage}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Question and motivation}{15}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The era-adjusted teammate delta}{16}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Auxiliary covariates}{17}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Defining the home indicator}{18}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}RQ1: paired t-test}{19}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.3}Auxiliary covariates}{16}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Defining the home indicator}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}RQ1: paired t-test}{18}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}RQ2: linear mixed-effects model}{20}{subsection.4.6}%
 \contentsline {subsection}{\numberline {4.7}RQ3: XGBoost with time-series cross-validation}{21}{subsection.4.7}%
 \contentsline {subsection}{\numberline {4.8}Limitations}{23}{subsection.4.8}%
@@ -50,14 +50,14 @@
 \contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{30}{subsubsection.5.5.3}%
 \contentsline {subsection}{\numberline {5.6}Overtake classification}{30}{subsection.5.6}%
 \contentsline {subsection}{\numberline {5.7}Descriptive analytics}{31}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Discussion and future directions}{33}{subsection.5.8}%
-\contentsline {section}{\numberline {6}Joint Discussion}{34}{section.6}%
-\contentsline {paragraph}{Machinery first, driver second.}{34}{paragraph*.56}%
-\contentsline {paragraph}{Era drift matters as much as model choice.}{34}{paragraph*.57}%
-\contentsline {paragraph}{The right baseline beats the right model.}{34}{paragraph*.58}%
-\contentsline {paragraph}{What we did not do.}{34}{paragraph*.59}%
-\contentsline {section}{\numberline {7}Conclusions}{35}{section.7}%
-\contentsline {section}{\numberline {A}Reproducibility}{35}{appendix.A}%
-\contentsline {paragraph}{Software.}{35}{paragraph*.60}%
-\contentsline {paragraph}{Data.}{35}{paragraph*.61}%
-\contentsline {paragraph}{Entry points.}{35}{paragraph*.62}%
+\contentsline {subsection}{\numberline {5.8}Discussion and future directions}{34}{subsection.5.8}%
+\contentsline {section}{\numberline {6}Joint Discussion}{35}{section.6}%
+\contentsline {paragraph}{Machinery first, driver second.}{35}{paragraph*.56}%
+\contentsline {paragraph}{Era drift matters as much as model choice.}{35}{paragraph*.57}%
+\contentsline {paragraph}{The right baseline beats the right model.}{35}{paragraph*.58}%
+\contentsline {paragraph}{What we did not do.}{35}{paragraph*.59}%
+\contentsline {section}{\numberline {7}Conclusions}{36}{section.7}%
+\contentsline {section}{\numberline {A}Reproducibility}{36}{appendix.A}%
+\contentsline {paragraph}{Software.}{36}{paragraph*.60}%
+\contentsline {paragraph}{Data.}{36}{paragraph*.61}%
+\contentsline {paragraph}{Entry points.}{36}{paragraph*.62}%

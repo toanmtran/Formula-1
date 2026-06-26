@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1782486305 "d:/applied_stats_project/docs/final_report.tex" "final_report.pdf" "final_report" 1782486311 0
+["pdflatex"] 1782489434 "d:/applied_stats_project/docs/final_report.tex" "final_report.pdf" "final_report" 1782489440 0
   "../outputs/home_advantage/figures/01_teammate_delta_hist.png" 1781856819 69420 606dea66c93291237efaba7d67ebe032 ""
   "../outputs/home_advantage/figures/02_home_vs_away_box.png" 1781856819 48999 bcf7f4f1153a976dbccfb6d2d0e1459e ""
   "../outputs/home_advantage/figures/03_home_vs_away_meanci.png" 1781856819 58326 8c2829e0a0438876d0c59d79405556aa ""
@@ -180,11 +180,12 @@
   "C:/Users/LENOVO/AppData/Roaming/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/Users/LENOVO/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "C:/Users/LENOVO/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1699094857 48766 0b93839be28e9744a24c45075c75b2e2 ""
-  "d:/applied_stats_project/docs/final_report.tex" 1782486274 67107 a9be07d5402924494e8290a0abecfbff ""
-  "final_report.aux" 1782486311 30476 abee29aceaf8f3686b7221e57cb60eab "pdflatex"
-  "final_report.out" 1782486311 9192 80b7e8314f23d4dbeca662b016025522 "pdflatex"
-  "final_report.tex" 1782486274 67107 a9be07d5402924494e8290a0abecfbff ""
-  "final_report.toc" 1782486311 5424 b2c9f27a44c0b0dedbb417d2eba8384b "pdflatex"
+  "d:/applied_stats_project/docs/final_report.tex" 1782489422 68754 c5eacc4274eb30046e292b4e6c6bdec2 ""
+  "final_report.aux" 1782489440 31054 e3960f1da51f9fb1e7034c39621db755 "pdflatex"
+  "final_report.out" 1782489440 9192 80b7e8314f23d4dbeca662b016025522 "pdflatex"
+  "final_report.tex" 1782489422 68754 c5eacc4274eb30046e292b4e6c6bdec2 ""
+  "final_report.toc" 1782489440 5424 ad1e93fd3f7106bafae6ff34d420c386 "pdflatex"
+  "logo-soict-hust-1.png" 1781973998 133642 9c295a879c4dc88d1a51e3138893da44 ""
   (generated)
   "final_report.aux"
   "final_report.log"

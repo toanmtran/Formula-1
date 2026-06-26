@@ -197,6 +197,16 @@ OUTPUT final_report.out
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8t.tfm
+INPUT .\logo-soict-hust-1.png
+INPUT .\logo-soict-hust-1.png
+INPUT .\logo-soict-hust-1.png
+INPUT .\logo-soict-hust-1.png
+INPUT .\logo-soict-hust-1.png
+INPUT .\logo-soict-hust-1.png
+INPUT .\logo-soict-hust-1.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8t.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ot1ppl.fd
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ot1ppl.fd
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ot1ppl.fd
@@ -251,6 +261,24 @@ INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7y.t
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8t.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
+INPUT C:\Users\LENOVO\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\base\8r.enc
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8t.tfm
@@ -287,7 +315,6 @@ INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7y.t
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8t.tfm
 INPUT .\final_report.toc
 INPUT .\final_report.toc
 INPUT final_report.toc
@@ -316,14 +343,8 @@ INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.t
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\zplmb7t.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
-INPUT C:\Users\LENOVO\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\base\8r.enc
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplri8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
@@ -333,8 +354,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
@@ -353,10 +372,6 @@ INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8t.tfm
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8c.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -367,20 +382,24 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplri8t.vf
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8c.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8c.vf
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
@@ -521,17 +540,17 @@ INPUT ..\outputs\home_advantage\figures\07_paired_diff_hist.png
 INPUT ..\outputs\home_advantage\figures\07_paired_diff_hist.png
 INPUT ..\outputs\home_advantage\figures\07_paired_diff_hist.png
 INPUT ..\outputs\home_advantage\figures\07_paired_diff_hist.png
-INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
-INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
-INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
-INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
-INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
-INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
+INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
+INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
+INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
+INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
+INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
+INPUT ..\outputs\home_advantage\figures\06_per_driver_effect.png
 INPUT ..\outputs\home_advantage\figures\08_mixedlm_marginal.png
 INPUT ..\outputs\home_advantage\figures\08_mixedlm_marginal.png
 INPUT ..\outputs\home_advantage\figures\08_mixedlm_marginal.png
