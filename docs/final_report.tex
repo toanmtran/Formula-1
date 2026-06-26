@@ -68,7 +68,7 @@
 \newtheorem*{remark}{Remark}
 
 % --- Title -----------------------------------------------------------
-\title{\textbf{Four Statistical Studies in Formula~1}\\[3pt]
+\title{\textbf{Statistical Studies in Formula~1}\\[3pt]
 \large Lap-Time Distributions, Grid-Position Advantage,
 Home-Race Effects, and Pit-Stop Strategy (1950--2026)}
 \author{Applied Statistics Project\\
@@ -113,7 +113,11 @@ Table~\ref{tab:summary}.
   \small
   \caption{Headline results across the four studies.}
   \label{tab:summary}
-  \begin{tabular}{p{0.18\textwidth} p{0.27\textwidth} p{0.22\textwidth} p{0.22\textwidth}}
+  \begin{tabular}{
+      >{\raggedright\arraybackslash}p{0.17\textwidth}
+      >{\raggedright\arraybackslash}p{0.20\textwidth}
+      >{\raggedright\arraybackslash}p{0.36\textwidth}
+      >{\raggedright\arraybackslash}p{0.17\textwidth}}
     \toprule
     Study & Target & Headline result & Sample \\
     \midrule
@@ -121,14 +125,17 @@ Table~\ref{tab:summary}.
       & Within-race lap time
       & Right-skewed families dominate; Gamma minimises AIC on a typical race ($1921.3$ vs.\ $1933.6$ for Normal)
       & $618{,}766$ laps, $571$ races \\
+    \addlinespace[2pt]
     Starting-grid advantage
       & Finishing position
       & $P(\text{Win}\mid\text{Pole})=43.0\%$; OLS slope $\hat\beta_\text{grid}=0.45$ per slot
       & $25{,}646$ driver--races \\
+    \addlinespace[2pt]
     Home-race advantage
       & Era-adjusted teammate delta
       & No aggregate effect ($t=0.65$, $p=0.51$); significant home$\times$experience interaction
       & $27{,}304$ driver--races \\
+    \addlinespace[2pt]
     Pit-stop strategy
       & Binary pit on next lap
       & BiLSTM assigns mean prob.\ $83.8\%$ on true pit laps; $3.16\%$ positive rate
@@ -1099,12 +1106,9 @@ We pursue four research questions:
 Per-lap telemetry is sourced from the FastF1 API: lap speed
 (mean, max, std), RPM, throttle, brake, DRS, gear, sector times,
 tyre compound, and tyre age. Historical pit durations come from the
-Ergast database. The BiLSTM was trained on the full $2018$--$2025$
-record ($152{,}475$ valid laps, $4{,}818$ pit stops, $3.16\%$
-positive rate). The descriptive figures in this section are
-regenerated from the $2024$ subset (23 races, $24{,}138$ valid laps,
-$731$ pit stops, $3.03\%$ rate); a full $2018$--$2025$
-regeneration is reproducible by running
+Ergast database. The BiLSTM and the descriptive figures in this section both use the
+full $2018$--$2025$ record ($152{,}475$ valid laps, $4{,}818$ pit
+stops, $3.16\%$ positive rate). The subset is reproducible by running
 \code{src/pit\_stop\_strategy/download\_subset.py} with
 \code{--years 2018 2019 2020 2021 2022 2023 2024 2025}.
 
@@ -1136,20 +1140,9 @@ build-up to a stop.
   \centering
   \includegraphics[width=0.85\textwidth]{01c_pitstop_lap_dist.png}
   \caption{Empirical distribution of the pit-stop lap across the
-  $2024$ season. The mean pit lap is $24.9$; the primary pit window
-  concentrates around laps $20$--$30$.}
+  $2018$--$2025$ seasons. The mean pit lap is $27.7$; the primary pit
+  window spreads broadly across laps $10$--$35$.}
   \label{fig:pit-laps}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.85\textwidth]{01d_pit_rate_season.png}
-  \caption{Pit-stop rate per race across the $2024$ season (one bar
-  per round, sorted by rate). The Japanese Grand Prix at Suzuka
-  produced the highest rate ($6.3\%$); the Canadian GP the lowest
-  ($1.2\%$). When multi-season data is available
-  \code{visualize.py} automatically switches to a per-season view.}
-  \label{fig:pit-rate-season}
 \end{figure}
 
 \subsection{Bidirectional LSTM pit-stop predictor}
@@ -1164,16 +1157,16 @@ dropout and batch normalisation along the feature dimension.
   $\times 2$ from the bidirectional pass.}
   \label{tab:bilstm-arch}
   \small
-  \begin{tabular}{llrrr}
+  \begin{tabular}{lllll}
     \toprule
-    Layer & Type & Hidden & Output dim & Dropout \\
+    Layer & Input dim.\ & Hidden size & Output dim.\ & Dropout \\
     \midrule
-    1 & BiLSTM   & $256$ & $512$ & $0.20$ \\
-    2 & BiLSTM   & $128$ & $256$ & $0.30$ \\
-    3 & BiLSTM   & $\phantom{0}64$ & $128$ & $0.30$ \\
-    4 & Dense (ReLU) & $\phantom{0}64$ & $\phantom{0}64$ & $0.20$ \\
-    5 & Dense (ReLU) & $\phantom{0}32$ & $\phantom{0}32$ & --- \\
-    6 & Output (sigmoid) & --- & $\phantom{00}1$ & --- \\
+    BiLSTM-1 & $D$ features & $256$ & $512$           & $0.20$ \\
+    BiLSTM-2 & $512$        & $128$ & $256$           & $0.30$ \\
+    BiLSTM-3 & $256$        & $\phantom{0}64$ & $128$ & $0.30$ \\
+    FC-1     & $128$        & ---   & $\phantom{0}64$ & $0.20$ \\
+    FC-2     & $\phantom{0}64$ & --- & $\phantom{0}32$ & --- \\
+    Output   & $\phantom{0}32$ & --- & $1$ probability & --- \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -1221,29 +1214,26 @@ the BiLSTM output.
 
 \subsubsection{Team risk profiles via mean and variance of stopping tyre life}
 For every pit-stop event we record \code{TyreLife} at the moment of
-stopping. Aggregating by constructor over the $2024$ subset gives
-Table~\ref{tab:team-risk}: low-variance teams (Red Bull, Ferrari)
-operate within a tight strategic window; high-variance teams (Kick
-Sauber, Williams) react opportunistically to Safety Cars and
-competitor undercuts.
+stopping. Aggregating by constructor over the $2018$--$2025$ subset
+gives Table~\ref{tab:team-risk}: low-variance teams (Ferrari,
+Mercedes) operate within a tight strategic window; high-variance
+teams (Kick Sauber, Toro Rosso) react opportunistically to Safety
+Cars and competitor undercuts.
 
 \begin{table}[H]
   \centering
-  \caption{Stopping tyre life by team, $2024$ season.}
+  \caption{Stopping tyre life by team, $2018$--$2025$ seasons.}
   \label{tab:team-risk}
   \begin{tabular}{lcc}
     \toprule
-    Team & Mean tyre life $\E[X]$ & Variance $\Var(X)$ \\
+    Team & Mean tyre life & Variance \\
     \midrule
-    Red Bull Racing & $19.5$ & $\phantom{0}83.4$ \\
-    Ferrari         & $18.3$ & $\phantom{0}84.5$ \\
-    McLaren         & $20.2$ & $\phantom{0}94.4$ \\
-    Aston Martin    & $17.5$ & $\phantom{0}95.0$ \\
-    Mercedes        & $19.3$ & $102.1$ \\
-    RB              & $16.7$ & $117.3$ \\
-    Alpine          & $18.1$ & $128.5$ \\
-    Williams        & $17.3$ & $140.4$ \\
-    Kick Sauber     & $18.5$ & $160.7$ \\
+    Ferrari         & $19.3$ laps & $\phantom{0}99.3$ \\
+    Mercedes        & $20.5$ laps & $111.0$ \\
+    Red Bull Racing & $19.7$ laps & $116.6$ \\
+    Alpine          & $18.7$ laps & $134.2$ \\
+    Toro Rosso      & $21.0$ laps & $150.4$ \\
+    Kick Sauber     & $20.2$ laps & $167.1$ \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -1252,9 +1242,9 @@ competitor undercuts.
   \centering
   \includegraphics[width=0.82\textwidth]{04a_risk_scatter.png}
   \caption{Mean vs.\ variance of stopping tyre life by constructor,
-  $2024$ season. Bottom-right (Ferrari, Red Bull, Mercedes) =
-  late-deterministic strategy; top-left (Kick Sauber, Williams) =
-  reactive/opportunistic.}
+  $2018$--$2025$ seasons. Low-variance (Ferrari, Mercedes, Red Bull
+  Racing) = late-deterministic strategy; high-variance (Kick Sauber,
+  Toro Rosso) = reactive/opportunistic.}
   \label{fig:pit-team-scatter}
 \end{figure}
 
@@ -1262,15 +1252,15 @@ competitor undercuts.
   \centering
   \includegraphics[width=0.82\textwidth]{04b_team_tyrelife_box.png}
   \caption{Distribution of stopping tyre life by team, ordered by
-  median ($2024$ season). The IQR width directly visualises each
-  team's strategic flexibility.}
+  median ($2018$--$2025$ seasons). The IQR width directly visualises
+  each team's strategic flexibility.}
   \label{fig:pit-team-box}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.82\textwidth]{04c_compound_mix_heatmap.png}
-  \caption{Compound mix at pit stop by team, $2024$ season
+  \caption{Compound mix at pit stop by team, $2018$--$2025$ seasons
   (row-normalised percentages). Green cells indicate compound choices
   that dominate a team's strategy; red cells indicate compounds
   they rarely select.}
@@ -1325,8 +1315,8 @@ shows the compound mix of pit stops over the seasons.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.82\textwidth]{05a_position_changes.png}
-  \caption{Total position changes per lap, $2024$ season aggregated
-  across all $23$ races. Early laps (red) and the primary pit
+  \caption{Total position changes per lap, aggregated across the
+  $2018$--$2025$ seasons. Early laps (red) and the primary pit
   window (orange) dominate; late-race changes (teal) are sparser.}
   \label{fig:race-pos-changes}
 \end{figure}
@@ -1334,30 +1324,34 @@ shows the compound mix of pit stops over the seasons.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.92\textwidth]{05c_pit_compound_season.png}
-  \caption{Pit-stop counts by tyre compound, per race ($2024$
-  season; rows ordered by total pit count). Soft-heavy strategies
-  appear at Bahrain, Spain and Japan; the Italian, Belgian and
-  Hungarian Grands Prix were essentially Medium--Hard only.}
+  \caption{Pit-stop counts by tyre compound, aggregated per season
+  ($2018$--$2025$). Medium has been the dominant pit compound since
+  $2021$; Soft usage peaked in $2019$ before tapering, while Hard
+  usage rose from a negligible share in $2018$ to roughly a third of
+  all stops by $2024$--$2025$.}
   \label{fig:race-pit-compound}
 \end{figure}
 
 \subsection{Descriptive analytics}
-Population-level descriptive statistics for the $2024$ subset are
-collected in Table~\ref{tab:pit-desc}. The primary pit window centres
-on lap $\sim 25$, with mean tyre life at pit $\sim 18$ laps.
+Population-level descriptive statistics for the $2018$--$2025$
+subset are collected in Table~\ref{tab:pit-desc}. The primary pit
+window centres on lap $\sim 28$, with mean tyre life at pit $\sim 15$
+laps.
 
 \begin{table}[H]
   \centering
-  \caption{Population-level descriptive statistics, 2024 season.}
+  \caption{Population-level descriptive statistics, $2018$--$2025$
+  seasons.}
   \label{tab:pit-desc}
-  \begin{tabular}{ll}
+  \begin{tabular}{l>{\raggedright\arraybackslash}p{0.62\linewidth}}
     \toprule
-    Quantity & Value \\
+    Analysis & Key finding \\
     \midrule
-    Mean lap time                  & $92.8$ s \\
-    Mean pit lap                   & $24.9$ \\
-    Mean tyre life at pit          & $18.2$ laps \\
-    Pit-stop positive rate         & $3.03\%$ ($731$/$24{,}138$) \\
+    Lap time distribution    & Mean of $89.6$ seconds; bimodal peaks reflect compound and circuit differences \\
+    Pit lap distribution     & Mean pit lap of $27.7$; primary window concentrated between laps $20$--$35$ \\
+    Tyre life distribution   & Mean of $15.1$ laps; SOFT compounds pit significantly earlier than HARD compounds \\
+    Position change timing   & Early laps ($1$--$15$) and mid-race laps ($16$--$40$) dominate net position changes \\
+    Class imbalance          & $4{,}818$ pit events from $152{,}475$ laps; $3.16\%$ positive rate \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -1367,8 +1361,9 @@ on lap $\sim 25$, with mean tyre life at pit $\sim 18$ laps.
   \includegraphics[width=0.82\textwidth]{02a_tyre_decay_compound.png}
   \caption{Compound-specific tyre degradation curves: mean
   performance loss (seconds vs.\ best lap) as a function of tyre age,
-  with $\pm 1\sigma$ band. The Soft compound shows the steepest
-  cliff.}
+  with $\pm 1\sigma$ band. All three compounds collapse rapidly over
+  the first five laps; Soft shows the highest sustained mean decay
+  and the widest variance band.}
   \label{fig:pit-tyre}
 \end{figure}
 
@@ -1376,12 +1371,15 @@ on lap $\sim 25$, with mean tyre life at pit $\sim 18$ laps.
   \centering
   \includegraphics[width=0.82\textwidth]{06a_corr_matrix.png}
   \caption{Pearson correlation between the engineered features
-  (lower triangle). The strongest interactions are
-  race-progress$\leftrightarrow$pit-window-$\Delta$ ($r=0.72$) and
-  race-progress$\leftrightarrow$tyre-life ($r=0.49$); raw
-  correlations with the pit-stop indicator are individually small,
-  consistent with the BiLSTM's role being to learn the
-  non-linear interaction structure rather than to amplify any
+  (lower triangle). The strongest interactions sit inside the
+  telemetry block (Speed$\leftrightarrow$Brake $r=-0.62$,
+  Speed$\leftrightarrow$Throttle $r=0.57$,
+  Brake$\leftrightarrow$Throttle $r=-0.51$) and the race-progress
+  block (race-progress$\leftrightarrow$tyre-life $r=0.49$,
+  race-progress$\leftrightarrow$pit-window-$\Delta$ $r=0.38$); raw
+  correlations with the pit-stop indicator are individually small
+  (all $\leq 0.15$), consistent with the BiLSTM's role being to learn
+  the non-linear interaction structure rather than to amplify any
   single feature.}
   \label{fig:pit-corr}
 \end{figure}

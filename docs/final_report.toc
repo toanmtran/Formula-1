@@ -38,26 +38,26 @@
 \contentsline {paragraph}{Leakage prevention.}{24}{paragraph*.40}%
 \contentsline {paragraph}{Sequence construction.}{24}{paragraph*.41}%
 \contentsline {subsection}{\numberline {5.3}Bidirectional LSTM pit-stop predictor}{25}{subsection.5.3}%
-\contentsline {paragraph}{Results.}{26}{paragraph*.45}%
+\contentsline {paragraph}{Results.}{25}{paragraph*.44}%
 \contentsline {subsection}{\numberline {5.4}Survival and stochastic modelling}{26}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Pace decay and PACF}{26}{subsubsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Cox proportional hazards}{26}{subsubsection.5.4.2}%
 \contentsline {subsubsection}{\numberline {5.4.3}Team risk profiles via mean and variance of stopping tyre life}{26}{subsubsection.5.4.3}%
-\contentsline {subsubsection}{\numberline {5.4.4}Welch's t-test for \texttt {\small traffic\_pressure}}{28}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.4}Welch's t-test for \texttt {\small traffic\_pressure}}{29}{subsubsection.5.4.4}%
 \contentsline {subsection}{\numberline {5.5}Strategic regression and VSC agility}{29}{subsection.5.5}%
 \contentsline {subsubsection}{\numberline {5.5.1}Pit-crew speed and championship points}{29}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}VSC tactical agility score}{29}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{29}{subsubsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.6}Overtake classification}{29}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Descriptive analytics}{30}{subsection.5.7}%
+\contentsline {subsubsection}{\numberline {5.5.2}VSC tactical agility score}{30}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{30}{subsubsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.6}Overtake classification}{30}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Descriptive analytics}{31}{subsection.5.7}%
 \contentsline {subsection}{\numberline {5.8}Discussion and future directions}{33}{subsection.5.8}%
-\contentsline {section}{\numberline {6}Joint Discussion}{33}{section.6}%
-\contentsline {paragraph}{Machinery first, driver second.}{34}{paragraph*.57}%
-\contentsline {paragraph}{Era drift matters as much as model choice.}{34}{paragraph*.58}%
-\contentsline {paragraph}{The right baseline beats the right model.}{34}{paragraph*.59}%
-\contentsline {paragraph}{What we did not do.}{34}{paragraph*.60}%
-\contentsline {section}{\numberline {7}Conclusions}{34}{section.7}%
+\contentsline {section}{\numberline {6}Joint Discussion}{34}{section.6}%
+\contentsline {paragraph}{Machinery first, driver second.}{34}{paragraph*.56}%
+\contentsline {paragraph}{Era drift matters as much as model choice.}{34}{paragraph*.57}%
+\contentsline {paragraph}{The right baseline beats the right model.}{34}{paragraph*.58}%
+\contentsline {paragraph}{What we did not do.}{34}{paragraph*.59}%
+\contentsline {section}{\numberline {7}Conclusions}{35}{section.7}%
 \contentsline {section}{\numberline {A}Reproducibility}{35}{appendix.A}%
-\contentsline {paragraph}{Software.}{35}{paragraph*.61}%
-\contentsline {paragraph}{Data.}{35}{paragraph*.62}%
-\contentsline {paragraph}{Entry points.}{35}{paragraph*.63}%
+\contentsline {paragraph}{Software.}{35}{paragraph*.60}%
+\contentsline {paragraph}{Data.}{35}{paragraph*.61}%
+\contentsline {paragraph}{Entry points.}{35}{paragraph*.62}%

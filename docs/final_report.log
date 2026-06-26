@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2026.6.2)  26 JUN 2026 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2026.6.2)  26 JUN 2026 22:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -851,82 +851,73 @@ File: ../outputs/home_advantage/figures/10_shap_beeswarm.png Graphic file (type 
 Package pdftex.def Info: ../outputs/home_advantage/figures/10_shap_beeswarm.png  used on input line 1040.
 (pdftex.def)             Requested size: 339.72592pt x 127.6206pt.
  [23 <../outputs/home_advantage/figures/11_shap_dependence_exp_home.png> <../outputs/home_advantage/figures/10_shap_beeswarm.png>]
-Overfull \hbox (43.0867pt too wide) in paragraph at lines 1118--1123
+Overfull \hbox (43.0867pt too wide) in paragraph at lines 1115--1120
 \T1/cmtt/m/n/10 PitOutTime\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10 LapTime\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10 Sector1-3Time\T1/ppl/m/n/10.95 (-20) , \T1/cmtt/m/n/10 SessionTime\T1/ppl/m/n/10.95 (-20) ) are dropped be-fore mod-elling. The \T1/cmtt/m/n/10 historical_pit_lap
  []
 
-<../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png, id=500, 477.34335pt x 337.5009pt>
+<../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png, id=500, 532.8708pt x 342.5598pt>
 File: ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png  used on input line 1137.
-(pdftex.def)             Requested size: 385.02547pt x 272.24127pt.
-[24]
-<../outputs/pit_stop_strategy/plots/01d_pit_rate_season.png, id=511, 634.89195pt x 359.54324pt>
-File: ../outputs/pit_stop_strategy/plots/01d_pit_rate_season.png Graphic file (type png)
-<use ../outputs/pit_stop_strategy/plots/01d_pit_rate_season.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/01d_pit_rate_season.png  used on input line 1146.
-(pdftex.def)             Requested size: 385.02547pt x 218.04277pt.
- [25 <../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png> <../outputs/pit_stop_strategy/plots/01d_pit_rate_season.png>]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 1236.
- (C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex/latex/psnfss\ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [26]
-<../outputs/pit_stop_strategy/plots/04a_risk_scatter.png, id=530, 555.7563pt x 431.81325pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png  used on input line 1134.
+(pdftex.def)             Requested size: 385.02547pt x 247.52621pt.
+[24] [25 <../outputs/pit_stop_strategy/plots/01c_pitstop_lap_dist.png>]
+<../outputs/pit_stop_strategy/plots/04a_risk_scatter.png, id=522, 406.1574pt x 468.7914pt>
 File: ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png  used on input line 1253.
-(pdftex.def)             Requested size: 371.43698pt x 288.60176pt.
-<../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png, id=531, 575.63055pt x 320.51746pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04a_risk_scatter.png  used on input line 1236.
+(pdftex.def)             Requested size: 371.43698pt x 428.71103pt.
+ [26]
+<../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png, id=528, 429.2838pt x 468.3096pt>
 File: ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png  used on input line 1263.
-(pdftex.def)             Requested size: 371.43698pt x 206.81775pt.
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png  used on input line 1246.
+(pdftex.def)             Requested size: 371.43698pt x 405.20372pt.
  [27 <../outputs/pit_stop_strategy/plots/04a_risk_scatter.png>]
-<../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png, id=539, 505.1673pt x 348.3414pt>
+<../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png, id=535, 438.438pt x 468.3096pt>
 File: ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png  used on input line 1272.
-(pdftex.def)             Requested size: 371.43698pt x 256.1315pt.
- [28 <../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png> <../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png>]
-<../outputs/pit_stop_strategy/plots/05a_position_changes.png, id=551, 530.4618pt x 337.5009pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png  used on input line 1255.
+(pdftex.def)             Requested size: 371.43698pt x 396.7645pt.
+ [28 <../outputs/pit_stop_strategy/plots/04b_team_tyrelife_box.png>] [29 <../outputs/pit_stop_strategy/plots/04c_compound_mix_heatmap.png>]
+<../outputs/pit_stop_strategy/plots/05a_position_changes.png, id=551, 526.6074pt x 342.5598pt>
 File: ../outputs/pit_stop_strategy/plots/05a_position_changes.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/05a_position_changes.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05a_position_changes.png  used on input line 1327.
-(pdftex.def)             Requested size: 371.43698pt x 236.33142pt.
- [29]
-<../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png, id=558, 690.53986pt x 376.16534pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05a_position_changes.png  used on input line 1310.
+(pdftex.def)             Requested size: 371.43698pt x 241.6249pt.
+<../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png, id=552, 521.7894pt x 342.5598pt>
 File: ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png  used on input line 1336.
-(pdftex.def)             Requested size: 416.72963pt x 227.00961pt.
- [30 <../outputs/pit_stop_strategy/plots/05a_position_changes.png> <../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png>]
-<../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png, id=567, 474.8139pt x 337.13956pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png  used on input line 1319.
+(pdftex.def)             Requested size: 416.72963pt x 273.58821pt.
+ [30 <../outputs/pit_stop_strategy/plots/05a_position_changes.png>]
+<../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png, id=561, 537.6888pt x 343.0416pt>
 File: ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png  used on input line 1367.
-(pdftex.def)             Requested size: 371.43698pt x 263.73428pt.
-<../outputs/pit_stop_strategy/plots/06a_corr_matrix.png, id=568, 565.8741pt x 480.95685pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png  used on input line 1354.
+(pdftex.def)             Requested size: 371.43698pt x 236.98683pt.
+ [31 <../outputs/pit_stop_strategy/plots/05c_pit_compound_season.png>]
+<../outputs/pit_stop_strategy/plots/06a_corr_matrix.png, id=569, 470.2368pt x 404.712pt>
 File: ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png  used on input line 1377.
-(pdftex.def)             Requested size: 371.43698pt x 315.70789pt.
- [31 <../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png>]
-<../outputs/pit_stop_strategy/plots/07a_hazard_rate.png, id=576, 477.34335pt x 337.13956pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/06a_corr_matrix.png  used on input line 1364.
+(pdftex.def)             Requested size: 371.43698pt x 319.6881pt.
+<../outputs/pit_stop_strategy/plots/07a_hazard_rate.png, id=570, 531.9072pt x 343.0416pt>
 File: ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png  used on input line 1391.
-(pdftex.def)             Requested size: 371.43698pt x 262.3556pt.
-<../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png, id=577, 471.56175pt x 337.5009pt>
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07a_hazard_rate.png  used on input line 1378.
+(pdftex.def)             Requested size: 371.43698pt x 239.56215pt.
+ [32 <../outputs/pit_stop_strategy/plots/02a_tyre_decay_compound.png> <../outputs/pit_stop_strategy/plots/06a_corr_matrix.png>]
+<../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png, id=579, 527.0892pt x 343.0416pt>
 File: ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png Graphic file (type png)
 <use ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png>
-Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png  used on input line 1400.
-(pdftex.def)             Requested size: 371.43698pt x 265.85545pt.
- [32 <../outputs/pit_stop_strategy/plots/06a_corr_matrix.png> <../outputs/pit_stop_strategy/plots/07a_hazard_rate.png>] [33 <../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png>]
-Overfull \hbox (19.67006pt too wide) in paragraph at lines 1522--1533
+Package pdftex.def Info: ../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png  used on input line 1387.
+(pdftex.def)             Requested size: 371.43698pt x 241.75012pt.
+ [33 <../outputs/pit_stop_strategy/plots/07a_hazard_rate.png> <../outputs/pit_stop_strategy/plots/07b_pace_decay_hist.png>] [34]
+Overfull \hbox (19.67006pt too wide) in paragraph at lines 1509--1520
 \T1/ppl/m/n/10.95 (-20) seeds are fixed to $\OT1/ppl/m/n/10.95 (-20) 42$ \T1/ppl/m/n/10.95 (-20) through-out. For Ten-sor-Flow, \T1/cmtt/m/n/10 tf.config.experimental.enable_op_determinism()
  []
 
-[34] [35] (final_report.aux)
+[35] (final_report.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -935,17 +926,17 @@ Package rerunfilecheck Info: File `final_report.out' has not changed.
 (rerunfilecheck)             Checksum: 80B7E8314F23D4DBECA662B016025522;9192.
  ) 
 Here is how much of TeX's memory you used:
- 18393 strings out of 475248
- 303517 string characters out of 5767626
+ 18362 strings out of 475248
+ 302508 string characters out of 5767626
  1934785 words of memory out of 5000000
- 38882 multiletter control sequences out of 15000+600000
- 650342 words of font info for 562 fonts, out of 8000000 for 9000
+ 38854 multiletter control sequences out of 15000+600000
+ 649828 words of font info for 558 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,15n,79p,1039b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on final_report.pdf (35 pages, 3514367 bytes).
+ <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1000.pk> <C:\Users\LENOVO\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/LENOVO/AppData/Roaming/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on final_report.pdf (35 pages, 3124145 bytes).
 PDF statistics:
- 794 PDF objects out of 1000 (max. 8388607)
- 171 named destinations out of 1000 (max. 500000)
- 111157 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 785 PDF objects out of 1000 (max. 8388607)
+ 170 named destinations out of 1000 (max. 500000)
+ 111152 words of extra memory for PDF output out of 128383 (max. 10000000)
 

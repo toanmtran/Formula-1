@@ -132,58 +132,56 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Data and feature engineering}{24}{subsection.5.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Leakage prevention.}{24}{paragraph*.40}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Sequence construction.}{24}{paragraph*.41}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Empirical distribution of the pit-stop lap across the $2024$ season. The mean pit lap is $24.9$; the primary pit window concentrates around laps $20$--$30$.}}{25}{figure.caption.42}\protected@file@percent }
-\newlabel{fig:pit-laps}{{25}{25}{Empirical distribution of the pit-stop lap across the $2024$ season. The mean pit lap is $24.9$; the primary pit window concentrates around laps $20$--$30$}{figure.caption.42}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Pit-stop rate per race across the $2024$ season (one bar per round, sorted by rate). The Japanese Grand Prix at Suzuka produced the highest rate ($6.3\%$); the Canadian GP the lowest ($1.2\%$). When multi-season data is available \texttt  {\small  visualize.py} automatically switches to a per-season view.}}{25}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:pit-rate-season}{{26}{25}{Pit-stop rate per race across the $2024$ season (one bar per round, sorted by rate). The Japanese Grand Prix at Suzuka produced the highest rate ($6.3\%$); the Canadian GP the lowest ($1.2\%$). When multi-season data is available \code {visualize.py} automatically switches to a per-season view}{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Empirical distribution of the pit-stop lap across the $2018$--$2025$ seasons. The mean pit lap is $27.7$; the primary pit window concentrates around laps $20$--$30$.}}{25}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:pit-laps}{{25}{25}{Empirical distribution of the pit-stop lap across the $2018$--$2025$ seasons. The mean pit lap is $27.7$; the primary pit window concentrates around laps $20$--$30$}{figure.caption.42}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Bidirectional LSTM pit-stop predictor}{25}{subsection.5.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Pit-stop BiLSTM architecture. ``Output dim'' includes the $\times 2$ from the bidirectional pass.}}{26}{table.caption.44}\protected@file@percent }
-\newlabel{tab:bilstm-arch}{{12}{26}{Pit-stop BiLSTM architecture. ``Output dim'' includes the $\times 2$ from the bidirectional pass}{table.caption.44}{}}
-\@writefile{toc}{\contentsline {paragraph}{Results.}{26}{paragraph*.45}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Pit-stop BiLSTM architecture. ``Output dim'' includes the $\times 2$ from the bidirectional pass.}}{25}{table.caption.43}\protected@file@percent }
+\newlabel{tab:bilstm-arch}{{12}{25}{Pit-stop BiLSTM architecture. ``Output dim'' includes the $\times 2$ from the bidirectional pass}{table.caption.43}{}}
+\@writefile{toc}{\contentsline {paragraph}{Results.}{25}{paragraph*.44}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Survival and stochastic modelling}{26}{subsection.5.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Pace decay and PACF}{26}{subsubsection.5.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Cox proportional hazards}{26}{subsubsection.5.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.3}Team risk profiles via mean and variance of stopping tyre life}{26}{subsubsection.5.4.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Stopping tyre life by team, $2024$ season.}}{27}{table.caption.46}\protected@file@percent }
-\newlabel{tab:team-risk}{{13}{27}{Stopping tyre life by team, $2024$ season}{table.caption.46}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Mean vs.\ variance of stopping tyre life by constructor, $2024$ season. Bottom-right (Ferrari, Red Bull, Mercedes) = late-deterministic strategy; top-left (Kick Sauber, Williams) = reactive/opportunistic.}}{27}{figure.caption.47}\protected@file@percent }
-\newlabel{fig:pit-team-scatter}{{27}{27}{Mean vs.\ variance of stopping tyre life by constructor, $2024$ season. Bottom-right (Ferrari, Red Bull, Mercedes) = late-deterministic strategy; top-left (Kick Sauber, Williams) = reactive/opportunistic}{figure.caption.47}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Distribution of stopping tyre life by team, ordered by median ($2024$ season). The IQR width directly visualises each team's strategic flexibility.}}{28}{figure.caption.48}\protected@file@percent }
-\newlabel{fig:pit-team-box}{{28}{28}{Distribution of stopping tyre life by team, ordered by median ($2024$ season). The IQR width directly visualises each team's strategic flexibility}{figure.caption.48}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Compound mix at pit stop by team, $2024$ season (row-normalised percentages). Green cells indicate compound choices that dominate a team's strategy; red cells indicate compounds they rarely select.}}{28}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:pit-team-compound}{{29}{28}{Compound mix at pit stop by team, $2024$ season (row-normalised percentages). Green cells indicate compound choices that dominate a team's strategy; red cells indicate compounds they rarely select}{figure.caption.49}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.4}Welch's t-test for \texttt  {\small  traffic\_pressure}}{28}{subsubsection.5.4.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Stopping tyre life by team, $2018$--$2025$ seasons.}}{26}{table.caption.45}\protected@file@percent }
+\newlabel{tab:team-risk}{{13}{26}{Stopping tyre life by team, $2018$--$2025$ seasons}{table.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Mean vs.\ variance of stopping tyre life by constructor, $2018$--$2025$ seasons. Low-variance (Ferrari, Mercedes, Red Bull Racing) = late-deterministic strategy; high-variance (Kick Sauber, Toro Rosso) = reactive/opportunistic.}}{27}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:pit-team-scatter}{{26}{27}{Mean vs.\ variance of stopping tyre life by constructor, $2018$--$2025$ seasons. Low-variance (Ferrari, Mercedes, Red Bull Racing) = late-deterministic strategy; high-variance (Kick Sauber, Toro Rosso) = reactive/opportunistic}{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Distribution of stopping tyre life by team, ordered by median ($2018$--$2025$ seasons). The IQR width directly visualises each team's strategic flexibility.}}{28}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:pit-team-box}{{27}{28}{Distribution of stopping tyre life by team, ordered by median ($2018$--$2025$ seasons). The IQR width directly visualises each team's strategic flexibility}{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Compound mix at pit stop by team, $2018$--$2025$ seasons (row-normalised percentages). Green cells indicate compound choices that dominate a team's strategy; red cells indicate compounds they rarely select.}}{29}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:pit-team-compound}{{28}{29}{Compound mix at pit stop by team, $2018$--$2025$ seasons (row-normalised percentages). Green cells indicate compound choices that dominate a team's strategy; red cells indicate compounds they rarely select}{figure.caption.48}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.4}Welch's t-test for \texttt  {\small  traffic\_pressure}}{29}{subsubsection.5.4.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Strategic regression and VSC agility}{29}{subsection.5.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}Pit-crew speed and championship points}{29}{subsubsection.5.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}VSC tactical agility score}{29}{subsubsection.5.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{29}{subsubsection.5.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Overtake classification}{29}{subsection.5.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Total position changes per lap, $2024$ season aggregated across all $23$ races. Early laps (red) and the primary pit window (orange) dominate; late-race changes (teal) are sparser.}}{30}{figure.caption.50}\protected@file@percent }
-\newlabel{fig:race-pos-changes}{{30}{30}{Total position changes per lap, $2024$ season aggregated across all $23$ races. Early laps (red) and the primary pit window (orange) dominate; late-race changes (teal) are sparser}{figure.caption.50}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Pit-stop counts by tyre compound, per race ($2024$ season; rows ordered by total pit count). Soft-heavy strategies appear at Bahrain, Spain and Japan; the Italian, Belgian and Hungarian Grands Prix were essentially Medium--Hard only.}}{30}{figure.caption.51}\protected@file@percent }
-\newlabel{fig:race-pit-compound}{{31}{30}{Pit-stop counts by tyre compound, per race ($2024$ season; rows ordered by total pit count). Soft-heavy strategies appear at Bahrain, Spain and Japan; the Italian, Belgian and Hungarian Grands Prix were essentially Medium--Hard only}{figure.caption.51}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Descriptive analytics}{30}{subsection.5.7}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Population-level descriptive statistics, 2024 season.}}{31}{table.caption.52}\protected@file@percent }
-\newlabel{tab:pit-desc}{{14}{31}{Population-level descriptive statistics, 2024 season}{table.caption.52}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Compound-specific tyre degradation curves: mean performance loss (seconds vs.\ best lap) as a function of tyre age, with $\pm 1\sigma $ band. The Soft compound shows the steepest cliff.}}{31}{figure.caption.53}\protected@file@percent }
-\newlabel{fig:pit-tyre}{{32}{31}{Compound-specific tyre degradation curves: mean performance loss (seconds vs.\ best lap) as a function of tyre age, with $\pm 1\sigma $ band. The Soft compound shows the steepest cliff}{figure.caption.53}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Pearson correlation between the engineered features (lower triangle). The strongest interactions are race-progress$\leftrightarrow $pit-window-$\Delta $ ($r=0.72$) and race-progress$\leftrightarrow $tyre-life ($r=0.49$); raw correlations with the pit-stop indicator are individually small, consistent with the BiLSTM's role being to learn the non-linear interaction structure rather than to amplify any single feature.}}{32}{figure.caption.54}\protected@file@percent }
-\newlabel{fig:pit-corr}{{33}{32}{Pearson correlation between the engineered features (lower triangle). The strongest interactions are race-progress$\leftrightarrow $pit-window-$\Delta $ ($r=0.72$) and race-progress$\leftrightarrow $tyre-life ($r=0.49$); raw correlations with the pit-stop indicator are individually small, consistent with the BiLSTM's role being to learn the non-linear interaction structure rather than to amplify any single feature}{figure.caption.54}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Empirical pit-hazard rate $h(t)$ as a function of tyre age, separated by compound. The Soft hazard rises earliest; the Hard much later.}}{32}{figure.caption.55}\protected@file@percent }
-\newlabel{fig:pit-hazard}{{34}{32}{Empirical pit-hazard rate $h(t)$ as a function of tyre age, separated by compound. The Soft hazard rises earliest; the Hard much later}{figure.caption.55}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Stationary pace-decay $\Delta X_t = X_t - X_{t-1}$ after AR(1) filtering, with a Gaussian fit overlaid. The residuals are approximately symmetric around zero, validating the filter.}}{33}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:pit-pacedecay}{{35}{33}{Stationary pace-decay $\Delta X_t = X_t - X_{t-1}$ after AR(1) filtering, with a Gaussian fit overlaid. The residuals are approximately symmetric around zero, validating the filter}{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}VSC tactical agility score}{30}{subsubsection.5.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{30}{subsubsection.5.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}Overtake classification}{30}{subsection.5.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Total position changes per lap, aggregated across the $2018$--$2025$ seasons. Early laps (red) and the primary pit window (orange) dominate; late-race changes (teal) are sparser.}}{30}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:race-pos-changes}{{29}{30}{Total position changes per lap, aggregated across the $2018$--$2025$ seasons. Early laps (red) and the primary pit window (orange) dominate; late-race changes (teal) are sparser}{figure.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Pit-stop counts by tyre compound, aggregated per season ($2018$--$2025$). Medium has been the dominant pit compound since $2021$; Soft usage peaked in $2019$ before tapering, while Hard usage rose from a negligible share in $2018$ to roughly a third of all stops by $2024$--$2025$.}}{31}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:race-pit-compound}{{30}{31}{Pit-stop counts by tyre compound, aggregated per season ($2018$--$2025$). Medium has been the dominant pit compound since $2021$; Soft usage peaked in $2019$ before tapering, while Hard usage rose from a negligible share in $2018$ to roughly a third of all stops by $2024$--$2025$}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Descriptive analytics}{31}{subsection.5.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Population-level descriptive statistics, $2018$--$2025$ seasons.}}{31}{table.caption.51}\protected@file@percent }
+\newlabel{tab:pit-desc}{{14}{31}{Population-level descriptive statistics, $2018$--$2025$ seasons}{table.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Compound-specific tyre degradation curves: mean performance loss (seconds vs.\ best lap) as a function of tyre age, with $\pm 1\sigma $ band. The Soft compound shows the steepest cliff.}}{32}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:pit-tyre}{{31}{32}{Compound-specific tyre degradation curves: mean performance loss (seconds vs.\ best lap) as a function of tyre age, with $\pm 1\sigma $ band. The Soft compound shows the steepest cliff}{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces Pearson correlation between the engineered features (lower triangle). The strongest interactions are race-progress$\leftrightarrow $pit-window-$\Delta $ ($r=0.72$) and race-progress$\leftrightarrow $tyre-life ($r=0.49$); raw correlations with the pit-stop indicator are individually small, consistent with the BiLSTM's role being to learn the non-linear interaction structure rather than to amplify any single feature.}}{32}{figure.caption.53}\protected@file@percent }
+\newlabel{fig:pit-corr}{{32}{32}{Pearson correlation between the engineered features (lower triangle). The strongest interactions are race-progress$\leftrightarrow $pit-window-$\Delta $ ($r=0.72$) and race-progress$\leftrightarrow $tyre-life ($r=0.49$); raw correlations with the pit-stop indicator are individually small, consistent with the BiLSTM's role being to learn the non-linear interaction structure rather than to amplify any single feature}{figure.caption.53}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Empirical pit-hazard rate $h(t)$ as a function of tyre age, separated by compound. The Soft hazard rises earliest; the Hard much later.}}{33}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:pit-hazard}{{33}{33}{Empirical pit-hazard rate $h(t)$ as a function of tyre age, separated by compound. The Soft hazard rises earliest; the Hard much later}{figure.caption.54}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Stationary pace-decay $\Delta X_t = X_t - X_{t-1}$ after AR(1) filtering, with a Gaussian fit overlaid. The residuals are approximately symmetric around zero, validating the filter.}}{33}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:pit-pacedecay}{{34}{33}{Stationary pace-decay $\Delta X_t = X_t - X_{t-1}$ after AR(1) filtering, with a Gaussian fit overlaid. The residuals are approximately symmetric around zero, validating the filter}{figure.caption.55}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.8}Discussion and future directions}{33}{subsection.5.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}Joint Discussion}{33}{section.6}\protected@file@percent }
-\newlabel{sec:joint}{{6}{33}{Joint Discussion}{section.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Machinery first, driver second.}{34}{paragraph*.57}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Era drift matters as much as model choice.}{34}{paragraph*.58}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{The right baseline beats the right model.}{34}{paragraph*.59}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{What we did not do.}{34}{paragraph*.60}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{34}{section.7}\protected@file@percent }
-\newlabel{sec:concl}{{7}{34}{Conclusions}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Joint Discussion}{34}{section.6}\protected@file@percent }
+\newlabel{sec:joint}{{6}{34}{Joint Discussion}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Machinery first, driver second.}{34}{paragraph*.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Era drift matters as much as model choice.}{34}{paragraph*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{The right baseline beats the right model.}{34}{paragraph*.58}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{What we did not do.}{34}{paragraph*.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{35}{section.7}\protected@file@percent }
+\newlabel{sec:concl}{{7}{35}{Conclusions}{section.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {A}Reproducibility}{35}{appendix.A}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Software.}{35}{paragraph*.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Data.}{35}{paragraph*.62}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Entry points.}{35}{paragraph*.63}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Software.}{35}{paragraph*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data.}{35}{paragraph*.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Entry points.}{35}{paragraph*.62}\protected@file@percent }
 \gdef \@abspage@last{35}
