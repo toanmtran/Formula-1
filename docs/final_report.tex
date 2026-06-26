@@ -86,7 +86,7 @@ publicly available Ergast and FastF1 Formula~1 datasets, addressing four
 self-contained research questions. \emph{First}, we ask which parametric
 distribution describes within-race lap times: across circuits and
 regulation eras, right-skewed families (Gamma, Log-Normal) consistently
-outperform the Normal under AIC, BIC, and Kolmogorov--Smirnov criteria.
+outperform the Normal under AIC and BIC criteria.
 \emph{Second}, we measure the predictive power of qualifying position:
 pole converts to victory $43\%$ of the time, and each grid slot lost
 costs a driver, on average, $0.45$ finishing positions. \emph{Third}, we
@@ -206,7 +206,6 @@ locally.
     $\hat\beta,\hat\theta$         & Estimated regression/parametric coefficients \\
     $\sigma_u^2,\sigma^2$          & Random-intercept and residual variance \\
     $\mathrm{AIC}, \mathrm{BIC}$   & Information criteria, $2k-2\ell$ and $k\ln n - 2\ell$ \\
-    $D_n$                          & Kolmogorov--Smirnov statistic \\
     \bottomrule
   \end{tabular}
 \end{table}
@@ -216,92 +215,114 @@ locally.
 % =====================================================================
 
 \subsection{Question and motivation}
-A surprising number of operational tasks in motorsport ---
-sector-time anomaly detection, in-race Monte-Carlo simulation, fair
-benchmarking across stints --- require a probabilistic model of the
-individual lap. The textbook default is the Normal distribution.
-But lap times are physically bounded from below (a car cannot lap
-faster than its mechanical limit) while their upper tail is open
-(traffic, blue flags, slow corners, tyre cliff). We therefore expect
-a right-skewed distribution rather than a symmetric one.
+Many practical tasks in motorsport --- spotting laps that were
+unusually slow or fast, simulating race strategy, comparing drivers
+fairly --- need a statistical model of a single lap time. The
+default model is the Normal (bell-curve) distribution, but lap
+times don't behave symmetrically. There is a hard floor on how fast
+a car can lap a given track, set by the limits of the engine, the
+tyres, and the track itself; but there is no ceiling on how slow a
+lap can be. A driver stuck behind a slower car, a section of track
+taken cautiously, worn tyres, or a small on-track mistake can all
+add seconds to a lap. We therefore expect a \emph{right-skewed}
+distribution --- one with a longer tail on the slow side --- rather
+than a symmetric bell curve.
 
 We ask three concrete questions:
 \begin{enumerate}
-  \item Which of five standard parametric families
-  (Normal, Log-Normal, Gamma, Weibull, Gumbel) best describes the
-  cleaned within-race lap-time distribution?
-  \item Does the answer depend on circuit geometry?
-  \item Does it depend on the regulation era?
+  \item Which of three standard distributions (Normal, Log-Normal,
+  Gamma) best describes the lap times within a single race?
+  \item Does the answer depend on the type of circuit?
+  \item Does it depend on the regulation era (the set of technical
+  rules in force at the time)?
 \end{enumerate}
 
 \subsection{Data and cleaning}
-For each chosen race we restrict to the per-driver per-lap times in
-the \code{lap\_times} table. Three filters are applied before fitting.
+For each race we use the per-driver per-lap times from the
+\code{lap\_times} table. Two filters are applied before fitting.
 \begin{itemize}
-  \item The formation lap (\code{lap} $= 1$) is dropped: its time is
-  dominated by the standing start and is qualitatively different.
-  \item In-laps, out-laps, and laps run under safety-car or
-  virtual-safety-car conditions inflate the upper tail. We cannot
-  isolate them explicitly without telemetry, so we proxy them with
-  the interquartile-range rule and trim observations outside
-  $[Q_1 - 2\,\mathrm{IQR},\;Q_3 + 2\,\mathrm{IQR}]$. The factor $2$
-  rather than the standard $1.5$ is deliberate: we want to remove
-  pit-affected and full-course-yellow laps, not the genuinely slow
-  laps of a tyre stint.
+  \item We drop lap $1$, the first lap of the race. Unlike the
+  subsequent laps, which are run continuously at racing speed,
+  lap $1$ begins from a complete standstill on the starting grid:
+  the drivers have to accelerate from rest, and lap $1$ also has
+  a much higher rate of collisions and other on-track incidents
+  than later laps, because all the cars are still packed close
+  together at the start, before they have had time to spread out
+  along the track.
+  Both effects make lap $1$ systematically slower and more
+  variable than a normal lap, so including it would distort the
+  distribution.
+  \item We also trim laps affected by anything other than normal
+  racing. Drivers entering the pits (where the team changes tyres
+  or repairs damage) slow down well before they reach the pit-lane
+  entry, so the lap on which they pit and the lap on which they
+  rejoin the track are both several seconds slower than a normal
+  racing lap. The same is true of laps run behind the \emph{safety
+  car} --- an official car that is sent onto the track at greatly
+  reduced speed after a serious incident, with all the competing
+  cars required to follow it in single file until the track is
+  clear. The dataset does not flag these laps directly, so we
+  remove them statistically using the interquartile-range (IQR)
+  rule: we discard any lap whose time falls outside
+  \[
+    [\,Q_1 - 2\cdot\mathrm{IQR},\;\; Q_3 + 2\cdot\mathrm{IQR}\,],
+  \]
+  where $Q_1$ and $Q_3$ are the $25$th and $75$th percentiles of
+  the lap times in the race and $\mathrm{IQR} = Q_3 - Q_1$ is the
+  gap between them. We use a multiplier of $2$ rather than the
+  textbook $1.5$ deliberately: the tighter $1.5$ cutoff would also
+  remove genuinely slow racing laps, such as laps run on heavily
+  worn tyres at the end of a tyre stint (the stretch of laps a
+  driver completes on a single set of tyres), which we want to
+  keep.
 \end{itemize}
-For the $2023$ Italian Grand Prix at Monza, this protocol removes
-$56$ of the $936$ raw laps ($6.0\%$), leaving $n=880$ clean laps.
+For the $2023$ Italian Grand Prix at Monza, this removes $56$ of
+the $936$ raw laps ($6.0\%$), leaving $880$ clean laps for fitting.
 
 \subsection{Candidate distributions}
-We consider five parametric families spanning the canonical shapes
-that lap-time data might take.
+We try three standard distributions, each capturing a different
+shape.
 \begin{itemize}
-  \item \textbf{Normal} $\dnorm(\mu,\sigma^2)$. The textbook
-  default. Symmetric, light tails, two parameters.
-  \item \textbf{Log-Normal}. Multiplicative-noise model:
-  $\log X \sim \dnorm(\mu,\sigma^2)$. Heavy right tail, supported on
-  $(0,\infty)$, three parameters as fit by SciPy (with a location).
-  \item \textbf{Gamma} $\Gamma(\alpha,\theta)$. Sum-of-exponentials
-  process; positive support; tunable skewness via $\alpha$. The
-  natural single-stop choice when lap-time perturbations are
-  additive and short-tailed.
-  \item \textbf{Weibull}. Standard reliability-engineering choice
-  for a process with a fixed minimum and a power-law tail; also
-  fitted with a location parameter.
-  \item \textbf{Gumbel}. Extreme-value distribution of the
-  maximum-of-many process; included as a control for whether lap
-  times look like the maximum of a stack of independent slowdowns.
+  \item \textbf{Normal.} The familiar bell curve, symmetric around
+  its mean. This is the textbook default for noisy measurements.
+  \item \textbf{Log-Normal.} A right-skewed distribution: most
+  values cluster near the low end, with a long tail of larger
+  values. It can only take positive values, which suits a quantity
+  like lap time (which cannot be zero or negative).
+  \item \textbf{Gamma.} Also right-skewed and positive-only, but
+  with a lighter upper tail than the Log-Normal --- it allows for
+  asymmetry, but does not permit laps that are very far from the
+  mean. A common choice in engineering for strictly positive
+  quantities such as waiting times.
 \end{itemize}
+Both Log-Normal and Gamma can capture the asymmetry we expect from
+lap times; the Normal cannot.
 
-\subsection{Goodness-of-fit criteria}
-Each family is fit by maximum likelihood. With $k$ free parameters
-and log-likelihood $\ell$, model selection uses Akaike and Bayesian
-information criteria,
-\[
-\mathrm{AIC} = 2k - 2\ell, \qquad
-\mathrm{BIC} = k\ln n - 2\ell.
-\]
-Smaller is better; AIC penalises complexity less than BIC, so the
-two can disagree, particularly at small $n$. As an independent
-non-parametric check we report the Kolmogorov--Smirnov statistic
-$D_n = \sup_x \lvert F_n(x) - F_\theta(x)\rvert$ and its asymptotic
-$p$-value, plus a Pearson chi-squared test on
-$\min(50,\lfloor\sqrt{n}\rfloor)$ bins, with adjacent bins merged
-until every expected count is at least five. AIC and BIC are
-\emph{relative} (used to rank families) while KS and $\chi^2$ are
-\emph{absolute} (used to ask whether the best-ranked family is
-actually compatible with the data).
+\subsection{How we judge a fit}
+For each candidate distribution we ask: how well does it match the
+data we observed? We rank the three candidates using two standard
+scores, \textbf{AIC} (Akaike Information Criterion) and \textbf{BIC}
+(Bayesian Information Criterion). Both reward closeness to the data
+while penalising a distribution that uses more parameters --- so a
+more complicated distribution has to fit noticeably better to win.
+Smaller values are better, and the distribution with the smallest
+AIC (and BIC) is declared the winner. We do not also report formal
+goodness-of-fit tests: the histogram and CDF figures below already
+show, visually, whether the winning distribution actually hugs the
+data well.
 
 \subsection{Deep dive: 2023 Italian Grand Prix}
-Figure~\ref{fig:lap-hist} overlays the five fitted PDFs on the
-empirical histogram for the $2023$ Italian Grand Prix. Three of the
-right-skewed distributions are nearly indistinguishable on the body;
-they separate only in the tails and on formal information criteria.
+Figure~\ref{fig:lap-hist} overlays the three fitted distributions
+on the histogram of cleaned lap times from the $2023$ Italian Grand
+Prix. The Log-Normal and Gamma curves are nearly indistinguishable
+through the \emph{body} of the distribution (the middle range,
+where most laps lie); they only separate in the \emph{tails} (the
+extreme fast and slow laps) and on the goodness-of-fit scores.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.82\textwidth]{01_overview_histogram.png}
-  \caption{Empirical histogram and five fitted PDFs for the $2023$
+  \caption{Empirical histogram and three fitted PDFs for the $2023$
   Italian Grand Prix ($n=880$).}
   \label{fig:lap-hist}
 \end{figure}
@@ -312,143 +333,80 @@ fit minimises both information criteria, with Log-Normal a near-tie.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.82\textwidth]{02_overview_aic_bic.png}
-  \caption{AIC and BIC comparison across the five candidate
-  distributions. The Gamma fit (red outline) wins on both criteria;
-  the Gumbel is decisively rejected.}
+  \caption{AIC and BIC comparison across the three candidate
+  distributions. The Gamma fit (red outline) wins on both criteria.}
   \label{fig:lap-aicbic}
-\end{figure}
-
-Figure~\ref{fig:lap-qq-best} shows the Q--Q plot for the AIC-optimal
-Gamma fit. Departures from the red diagonal would indicate
-mis-specification.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.82\textwidth]{03_overview_qq_best.png}
-  \caption{Q--Q plot for the AIC-optimal Gamma fit. Points track the
-  identity line closely through both tails.}
-  \label{fig:lap-qq-best}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.82\textwidth]{04_overview_cdf.png}
-  \caption{Empirical vs.\ theoretical CDFs. The right-skewed families
-  hug the black empirical step function much more tightly than the
-  Normal or Gumbel.}
+  \caption{Empirical (data) vs.\ theoretical (fitted) cumulative
+  distribution functions, or CDFs. A CDF gives, for each lap time
+  $x$, the fraction of laps that are no slower than $x$; it rises
+  from $0$ to $1$. The black step function is the empirical CDF
+  computed directly from the data. The right-skewed families
+  (Gamma, Log-Normal) hug it more closely than the Normal.}
   \label{fig:lap-cdf}
 \end{figure}
 
-Table~\ref{tab:lap-gof} reports the full goodness-of-fit comparison.
-The Gamma distribution attains the smallest AIC and BIC, with
-Log-Normal a near-tie. The Normal distribution is fourth on
-information criteria but actually has the smallest KS statistic, a
-reminder that the KS test alone is a coarse instrument for
-selection. The Gumbel fit is decisively rejected by every criterion.
+Table~\ref{tab:lap-gof} reports the AIC and BIC scores for the
+three candidates. The Gamma distribution attains the smallest AIC
+and BIC, with Log-Normal a near-tie; the Normal is third.
 
 \begin{table}[H]
   \centering
   \small
-  \caption{Goodness-of-fit, 2023 Italian Grand Prix. Smaller AIC, BIC and KS values indicate better fit.}
+  \caption{AIC and BIC scores, 2023 Italian Grand Prix. Smaller values indicate a better fit.}
   \label{tab:lap-gof}
-  \begin{tabular}{lrrrrrr}
+  \begin{tabular}{lrr}
     \toprule
-    Distribution & $\ell$ & AIC & BIC & KS stat & KS $p$ & $\chi^2$ $p$ \\
+    Distribution & AIC & BIC \\
     \midrule
-    Gamma       & $-957.6$ & $1921.3$ & $1935.6$ & $0.0372$ & $0.172$ & $0.138$ \\
-    Log-Normal  & $-957.7$ & $1921.4$ & $1935.8$ & $0.0370$ & $0.175$ & $0.144$ \\
-    Weibull     & $-958.6$ & $1923.1$ & $1937.5$ & $0.0332$ & $0.281$ & $0.255$ \\
-    Normal      & $-964.8$ & $1933.6$ & $1943.1$ & $0.0276$ & $0.507$ & $0.213$ \\
-    Gumbel      & $-989.1$ & $1982.2$ & $1991.7$ & $0.0672$ & $0.001$ & $1.1\!\times\!10^{-7}$ \\
+    Gamma       & $1921.3$ & $1935.6$ \\
+    Log-Normal  & $1921.4$ & $1935.8$ \\
+    Normal      & $1933.6$ & $1943.1$ \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-A subtle but important point about the table: the Normal fit has
-the \emph{smallest} KS statistic of any candidate, yet ranks fourth on
-both AIC and BIC. The reason is that the KS statistic is a
-$\sup$-norm measure that rewards good fit in the body of the
-distribution (where most of the mass lives), while AIC and BIC
-penalise tail mis-specification more directly through the log-likelihood.
-On lap times the Normal looks good in the middle and is wrong in the
-tails; the right-skewed families look slightly worse in the middle
-but very much better in the tails, which is where simulation and
-anomaly-detection users actually care.
-
-\subsubsection*{Q--Q plots for all five candidates}
-Figures~\ref{fig:lap-qq-normal}--\ref{fig:lap-qq-gumbel} show the
-individual Q--Q plots for every candidate. The right-skewed families
-(Log-Normal, Gamma, Weibull) track the diagonal almost perfectly
-through both tails; the Normal underestimates the upper tail; the
-Gumbel fails systematically in the lower tail.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.78\textwidth]{05_qq_normal.png}
-  \caption{Q--Q plot --- Normal fit. The body is well matched but the
-  Normal underestimates the upper tail.}
-  \label{fig:lap-qq-normal}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.78\textwidth]{06_qq_lognormal.png}
-  \caption{Q--Q plot --- Log-Normal fit.}
-  \label{fig:lap-qq-lognormal}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.78\textwidth]{07_qq_gamma.png}
-  \caption{Q--Q plot --- Gamma fit. AIC-optimal.}
-  \label{fig:lap-qq-gamma}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.78\textwidth]{08_qq_weibull.png}
-  \caption{Q--Q plot --- Weibull fit.}
-  \label{fig:lap-qq-weibull}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.78\textwidth]{09_qq_gumbel.png}
-  \caption{Q--Q plot --- Gumbel fit. Decisively rejected; the
-  lower-tail systematic deviation is visible.}
-  \label{fig:lap-qq-gumbel}
-\end{figure}
+The size of the gap between Normal and the two right-skewed
+families ($\approx 12$ AIC points) is substantial: it tells us the
+asymmetry is a real feature of the data, not just noise. The
+Gamma--Log-Normal gap ($0.1$ AIC points), by contrast, is
+negligible --- on this race we cannot tell the two apart.
 
 \subsection{Cross-circuit comparison}
-We repeat the procedure on three circuits from the same season,
-spanning the spectrum of geometry: Monza (high-speed permanent),
-Monaco (narrow street), and Silverstone (high-downforce mixed).
-Figures~\ref{fig:lap-monza}--\ref{fig:lap-silverstone} report each
-circuit's best-fit distribution alongside its empirical summaries.
+We repeat the procedure on two circuits from the same season,
+chosen to span very different circuit types:
+\begin{itemize}
+  \item \textbf{Monza} --- a long, fast, purpose-built racing
+  circuit with long straights and only a few corners.
+  \item \textbf{Monaco} --- a slow, narrow circuit laid out on
+  closed-off public streets through the city of Monte Carlo. The
+  track is lined by concrete walls and there is almost no room to
+  overtake.
+\end{itemize}
+Figures~\ref{fig:lap-monza} and \ref{fig:lap-monaco} show each
+circuit's lap-time distribution and best-fit curve.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.78\textwidth]{11_circuit_monza.png}
-  \caption{2023 Monza --- high-speed permanent circuit. Tight, mildly
-  right-skewed; Gamma fit is AIC-optimal.}
+  \caption{2023 Monza --- purpose-built, high-speed circuit.
+  Lap times are tightly clustered and only mildly asymmetric;
+  Gamma is the best fit.}
   \label{fig:lap-monza}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.78\textwidth]{12_circuit_monaco.png}
-  \caption{2023 Monaco --- narrow street circuit. Order-of-magnitude
-  larger dispersion and heavy upper tail; Log-Normal is AIC-optimal.}
+  \caption{2023 Monaco --- narrow street circuit. Lap times are
+  spread out roughly ten times more than at Monza, with a long
+  slow tail produced by traffic in the cramped layout; Log-Normal
+  is the best fit.}
   \label{fig:lap-monaco}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.78\textwidth]{13_circuit_silverstone.png}
-  \caption{2023 Silverstone --- mixed/high-downforce. Tightest and
-  most symmetric of the three; Normal is AIC-optimal (the only race
-  in our sample best fit by a symmetric distribution).}
-  \label{fig:lap-silverstone}
 \end{figure}
 
 A summary table of the best fit per circuit appears in
@@ -464,34 +422,37 @@ Table~\ref{tab:lap-circuit}.
     \midrule
     Monza        & $880$  & $86.94$ & $0.72$ & $0.32$ & Gamma \\
     Monaco       & $1{,}467$ & $84.23$ & $8.91$ & $1.17$ & Log-Normal \\
-    Silverstone  & $818$  & $93.05$ & $1.05$ & $0.08$ & Normal \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-Two patterns are immediate.
-\begin{itemize}
-  \item \textbf{Street circuits are heavy-tailed.} Monaco shows
-  $\sigma = 8.91$\,s and skewness $1.17$, an order of magnitude more
-  dispersed than either Monza ($\sigma = 0.72$\,s) or Silverstone
-  ($\sigma = 1.05$\,s). The Log-Normal fit reflects the long
-  upper tail produced by traffic and lapping.
-  \item \textbf{Geometry selects the family.} The tighter and more
-  symmetric Silverstone distribution is best fit by the Normal; the
-  mildly skewed Monza distribution prefers the Gamma; the heavy-tailed
-  Monaco distribution prefers the Log-Normal.
-\end{itemize}
+The contrast is striking. (In the table, $\mu$ is the mean lap
+time, $\sigma$ is the standard deviation --- a measure of how much
+the lap times typically vary from the mean --- and ``skew'' is a
+measure of asymmetry that is $0$ for a symmetric distribution and
+positive when the slow tail is the longer one.) Monaco's lap times
+are roughly ten times more spread out than Monza's ($\sigma =
+8.91$\,s vs.\ $0.72$\,s) and visibly more asymmetric (skew $1.17$
+vs.\ $0.32$). The Log-Normal fit at Monaco reflects the long slow
+tail produced by drivers caught behind a slower car on a track
+that has almost nowhere to overtake; the milder Gamma fit at Monza
+reflects a track where overtaking is easier and the slow tail is
+shorter. The choice of best-fit family therefore depends on the
+circuit, not just on the cars or drivers.
 
 \subsection{Cross-era comparison at Monza}
-Holding the circuit fixed and varying the year isolates the effect of
-regulation. Figures~\ref{fig:lap-v10}--\ref{fig:lap-ground} compare
-four Italian Grands Prix spanning four distinct technical eras.
+Keeping the circuit fixed at Monza and varying the year lets us
+isolate the effect of the technical regulations: any change we see
+between years is due to the rules and the cars they produced, not
+to a change of venue. Figures~\ref{fig:lap-v10}--\ref{fig:lap-ground}
+compare four Italian Grands Prix run under four different sets of
+rules.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.78\textwidth]{14_era_v10.png}
   \caption{Monza 2005 --- V10 era. Wide distribution and high
-  skewness; the AIC selects Gumbel.}
+  skewness; the AIC selects Log-Normal.}
   \label{fig:lap-v10}
 \end{figure}
 
@@ -518,17 +479,19 @@ four Italian Grands Prix spanning four distinct technical eras.
   \label{fig:lap-ground}
 \end{figure}
 
-The absolute pace shifts with the rules --- the V10 cars of $2005$ lap
-two seconds faster than the V8 cars of $2013$, and the
-turbo-hybrid/ground-effect cars sit in between --- but the
+The absolute pace shifts with the rules --- the V10 cars of $2005$
+lap roughly two seconds faster than the V8 cars of $2013$, and the
+turbo-hybrid and ground-effect cars sit in between --- but the
 \emph{shape} of the distribution is stable.
-Table~\ref{tab:lap-era} collects the summary statistics. In
-particular, every era remains right-skewed: even in the modern
-ground-effect era the distribution is best fit by the Gamma, not the
-Normal. The modern era is, however, noticeably tighter
-($\sigma = 0.72$\,s vs.\ $1.44$\,s in the V10 era), which is
-consistent with the convergence of car designs and the much narrower
-tyre-window that modern compounds tolerate.
+Table~\ref{tab:lap-era} collects the summary statistics. Every era
+remains right-skewed: even in the modern ground-effect era the
+distribution is best fit by Gamma, not Normal. The modern era is,
+however, noticeably tighter (the standard deviation is
+$0.72$\,s vs.\ $1.44$\,s in the V10 era). This is consistent with
+two changes in modern racing: car designs across teams have become
+much more similar, and the narrow temperature range over which
+modern tyres grip the track well punishes any driver whose tyres
+fall outside it.
 
 \begin{table}[H]
   \centering
@@ -538,7 +501,7 @@ tyre-window that modern compounds tolerate.
     \toprule
     Year & Era & $n$ & $\mu$ (s) & $\sigma$ (s) & skew & Best fit \\
     \midrule
-    $2005$ & V10              & $964$  & $84.70$ & $1.44$ & $0.87$ & Gumbel \\
+    $2005$ & V10              & $964$  & $84.70$ & $1.44$ & $0.87$ & Log-Normal \\
     $2013$ & V8               & $1{,}013$ & $89.21$ & $1.46$ & $0.67$ & Gamma \\
     $2019$ & Turbo-hybrid     & $895$  & $85.60$ & $1.48$ & $0.70$ & Log-Normal \\
     $2023$ & Ground effect    & $880$  & $86.94$ & $0.72$ & $0.32$ & Gamma \\
@@ -548,8 +511,8 @@ tyre-window that modern compounds tolerate.
 
 \subsection{Synthesis: why right-skew is the rule}
 Figure~\ref{fig:lap-skew} ranks the skewness across all seven races
-analysed; Figure~\ref{fig:lap-pie} shows which family wins by AIC most
-often. Every race has positive skew, and only one of the seven
+analysed; Figure~\ref{fig:lap-pie} shows which family wins by AIC
+most often. Every race has positive skew, and only one of the seven
 (Silverstone) is best fit by the Normal.
 
 \begin{figure}[H]
@@ -565,35 +528,21 @@ often. Every race has positive skew, and only one of the seven
   \centering
   \includegraphics[width=0.62\textwidth]{19_best_fit_pie.png}
   \caption{Frequency of the AIC-optimal family across the seven
-  races. Right-skewed families (Gamma, Log-Normal, Gumbel) account
-  for $86\%$ of selections.}
+  races. Right-skewed families (Gamma, Log-Normal) account for
+  $86\%$ of selections.}
   \label{fig:lap-pie}
 \end{figure}
 
-The physical reading is straightforward. There is a near-deterministic
-\emph{lower} bound (the qualifying-pace floor) and a long catalogue
-of \emph{upper} perturbations (tyre cliff, traffic, blue flags, fuel
-saving, off-track moments). A symmetric model is therefore the wrong
-default. For routine work --- generating quantile bands around a
-benchmark lap, simulating stints, or scoring outliers --- a Gamma or
-Log-Normal fit is preferable.
-
-\subsection{Take-home and practical implications}
-Three concrete consequences follow for downstream work.
-\begin{itemize}
-  \item \textbf{Quantile bands and outlier detection.} A Normal
-  $\pm 2\sigma$ band on lap times will systematically over-flag fast
-  laps and under-flag slow laps. Practitioners should compute
-  empirical or Gamma quantiles instead.
-  \item \textbf{Stint simulation.} Monte-Carlo simulators that sample
-  lap times from a Gaussian distribution will produce an unrealistically
-  symmetric stint envelope. Using Gamma or Log-Normal samples reproduces
-  the empirically observed asymmetry without ad-hoc winsorising.
-  \item \textbf{Cross-circuit benchmarking.} The choice of distribution
-  family matters more for street circuits than for permanent ones. A
-  fair benchmarking metric should either fit per-circuit or use a
-  rank-based statistic that is invariant under monotone transformations.
-\end{itemize}
+The physical picture is simple. A lap time has a hard floor (the
+fastest the car can physically lap a given track) but no ceiling:
+many things can make a lap slower --- worn tyres losing grip,
+slower traffic ahead, the marshals waving a driver out of the way
+of a faster car, the driver deliberately lifting off to save fuel,
+or a small mistake that briefly takes the car off the track. A
+symmetric bell curve is therefore the wrong default. Whenever we
+want to set an expected range around a benchmark lap, simulate a
+stint, or flag unusually slow laps, the right-skewed Gamma or
+Log-Normal fit is the better choice.
 
 % =====================================================================
 \section{Starting-Grid Advantage}\label{sec:grid}

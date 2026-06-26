@@ -30,8 +30,6 @@ DIST_COLORS = {
     "Normal":     "#C42021",   # red
     "Log-Normal": "#2E5BA8",   # blue
     "Gamma":      "#0F9E8C",   # teal
-    "Weibull":    "#D9650A",   # orange
-    "Gumbel":     "#6A3D9A",   # purple
 }
 
 OBS_FILL    = "#B5C9E2"   # soft blue histogram fill
@@ -75,7 +73,6 @@ plt.rcParams.update({
 })
 
 FIG_SOLO   = (7.5, 4.8)
-FIG_TABLE  = (12.0, 4.5)
 FIG_BAR    = (9.0, 5.0)
 FIG_PIE    = (6.0, 5.5)
 
@@ -137,8 +134,6 @@ class DistributionAnalysis:
         "Normal":     stats.norm,
         "Log-Normal": stats.lognorm,
         "Gamma":      stats.gamma,
-        "Weibull":    stats.weibull_min,
-        "Gumbel":     stats.gumbel_r,
     }
 
     def __init__(self, data, label=""):
@@ -162,54 +157,8 @@ class DistributionAnalysis:
                 "bic":            k * np.log(self.n) - 2 * ll,
             }
 
-    def run_gof_tests(self):
-        for name, (dist, params) in self.fits.items():
-            ks_stat, ks_p = stats.kstest(self.data, dist.cdf, args=params)
-            self.results[name]["ks_stat"] = ks_stat
-            self.results[name]["ks_p"]    = ks_p
-
-            n_bins = min(50, int(np.sqrt(self.n)))
-            observed, bin_edges = np.histogram(self.data, bins=n_bins)
-            expected = np.diff(dist.cdf(bin_edges, *params)) * self.n
-            if expected.sum() > 0:
-                expected = expected * (observed.sum() / expected.sum())
-            mask = expected >= 5
-            if mask.sum() >= 3:
-                om = observed[mask].copy()
-                em = expected[mask].copy()
-                om[-1] += observed[~mask].sum()
-                em[-1] += expected[~mask].sum()
-                try:
-                    chi2_stat, chi2_p = stats.chisquare(om, em)
-                except ValueError:
-                    chi2_stat, chi2_p = np.nan, np.nan
-            else:
-                chi2_stat, chi2_p = np.nan, np.nan
-
-            self.results[name]["chi2_stat"] = chi2_stat
-            self.results[name]["chi2_p"]    = chi2_p
-
     def get_best(self, metric="aic"):
         return min(self.results, key=lambda n: self.results[n][metric])
-
-    def summary_df(self):
-        rows = []
-        for name in self.DISTRIBUTIONS:
-            r = self.results[name]
-            rows.append({
-                "Distribution":   name,
-                "Log-Likelihood": r["log_likelihood"],
-                "AIC":            r["aic"],
-                "BIC":            r["bic"],
-                "KS Stat":        r["ks_stat"],
-                "KS p-value":     r["ks_p"],
-                "Chi2 Stat":      r["chi2_stat"],
-                "Chi2 p-value":   r["chi2_p"],
-            })
-        df = pd.DataFrame(rows)
-        df["AIC Rank"] = df["AIC"].rank().astype(int)
-        df["BIC Rank"] = df["BIC"].rank().astype(int)
-        return df.sort_values("AIC").reset_index(drop=True)
 
 
 # ---------------------------------------------------------------------------
@@ -280,38 +229,6 @@ def plot_aic_bic(analysis, race_label, filename):
     _save(fig, filename)
 
 
-def plot_qq(analysis, dist_name, race_label, filename):
-    fig, ax = plt.subplots(figsize=FIG_SOLO)
-    data = analysis.data
-    sorted_data = np.sort(data)
-    n = len(sorted_data)
-
-    dist, params = analysis.fits[dist_name]
-    theoretical_q = dist.ppf((np.arange(1, n + 1) - 0.5) / n, *params)
-
-    ax.scatter(theoretical_q, sorted_data, s=14, alpha=0.55,
-               color=DIST_COLORS[dist_name], zorder=3, edgecolor="none")
-
-    qmin = min(np.nanmin(theoretical_q), sorted_data.min())
-    qmax = max(np.nanmax(theoretical_q), sorted_data.max())
-    ax.plot([qmin, qmax], [qmin, qmax], ls="--",
-            color=HIGHLIGHT, linewidth=1.6, label="Perfect fit", zorder=4)
-
-    ks  = analysis.results[dist_name]["ks_stat"]
-    aic = analysis.results[dist_name]["aic"]
-    ax.text(0.04, 0.96, f"KS = {ks:.4f}\nAIC = {aic:.0f}",
-            transform=ax.transAxes, fontsize=12, va="top",
-            bbox=dict(boxstyle="round,pad=0.45", facecolor="white",
-                      edgecolor="#BBBBBB", alpha=0.95))
-
-    ax.set_xlabel(f"Theoretical quantiles ({dist_name})")
-    ax.set_ylabel("Observed quantiles (seconds)")
-    ax.set_title(f"Q–Q plot — {dist_name},  {race_label}")
-    ax.legend(loc="lower right", framealpha=0.95)
-
-    _save(fig, filename)
-
-
 def plot_cdf(analysis, race_label, filename):
     fig, ax = plt.subplots(figsize=FIG_SOLO)
     data = analysis.data
@@ -331,55 +248,6 @@ def plot_cdf(analysis, race_label, filename):
     ax.set_ylabel("Cumulative probability")
     ax.set_title(f"Empirical vs. theoretical CDF — {race_label}")
     ax.legend(loc="lower right", framealpha=0.95, ncol=2)
-
-    _save(fig, filename)
-
-
-def plot_gof_table(analysis, race_label, filename):
-    df = analysis.summary_df()
-    fig, ax = plt.subplots(figsize=FIG_TABLE)
-    ax.set_axis_off()
-    fig.suptitle(f"Goodness-of-fit results — {race_label}",
-                 fontsize=15, fontweight="bold", y=0.97, color=TEXT)
-
-    headers = ["Distribution", "AIC", "BIC", "AIC rank", "BIC rank",
-               "KS stat", "KS p-value", "χ² stat", "χ² p-value"]
-    table_data = []
-    for _, row in df.iterrows():
-        table_data.append([
-            row["Distribution"],
-            f"{row['AIC']:.1f}",
-            f"{row['BIC']:.1f}",
-            f"{int(row['AIC Rank'])}",
-            f"{int(row['BIC Rank'])}",
-            f"{row['KS Stat']:.4f}",
-            f"{row['KS p-value']:.3e}",
-            f"{row['Chi2 Stat']:.2f}"   if not np.isnan(row["Chi2 Stat"])  else "—",
-            f"{row['Chi2 p-value']:.3e}" if not np.isnan(row["Chi2 p-value"]) else "—",
-        ])
-
-    table = ax.table(cellText=table_data, colLabels=headers,
-                     cellLoc="center", loc="center")
-    table.auto_set_font_size(False)
-    table.set_fontsize(12)
-    table.scale(1, 1.9)
-
-    for col in range(len(headers)):
-        cell = table[(0, col)]
-        cell.set_facecolor("#2E5BA8")
-        cell.set_text_props(color="white", fontweight="bold")
-        cell.set_edgecolor("#BBBBBB")
-    for col in range(len(headers)):
-        cell = table[(1, col)]
-        cell.set_facecolor("#E5F4F1")
-        cell.set_text_props(color="#0F6F62", fontweight="bold")
-        cell.set_edgecolor("#BBBBBB")
-    for r in range(2, len(table_data) + 1):
-        for c in range(len(headers)):
-            cell = table[(r, c)]
-            cell.set_facecolor("#F8F8F8" if r % 2 == 0 else "white")
-            cell.set_edgecolor("#BBBBBB")
-            cell.set_text_props(color=TEXT)
 
     _save(fig, filename)
 
@@ -503,25 +371,10 @@ def run_analysis():
     data = clean_laps["time_seconds"].values
     A = DistributionAnalysis(data, label=race_label)
     A.fit_all()
-    A.run_gof_tests()
 
     plot_histogram_with_fits(A, race_label, "01_overview_histogram.png")
     plot_aic_bic           (A, race_label, "02_overview_aic_bic.png")
-    plot_qq                (A, A.get_best("aic"), race_label,
-                            "03_overview_qq_best.png")
     plot_cdf               (A, race_label, "04_overview_cdf.png")
-    plot_gof_table         (A, race_label, "10_gof_table.png")
-
-    # Individual Q-Qs for all five candidates
-    qq_codes = {
-        "Normal":     "05_qq_normal.png",
-        "Log-Normal": "06_qq_lognormal.png",
-        "Gamma":      "07_qq_gamma.png",
-        "Weibull":    "08_qq_weibull.png",
-        "Gumbel":     "09_qq_gumbel.png",
-    }
-    for dist_name, fn in qq_codes.items():
-        plot_qq(A, dist_name, race_label, fn)
 
     print("\n[Part B] Cross-circuit comparison (2023 season)")
     circuit_configs = [
@@ -539,7 +392,6 @@ def run_analysis():
             continue
         a = DistributionAnalysis(clean["time_seconds"].values, label=label)
         a.fit_all()
-        a.run_gof_tests()
         plot_single_distribution(a, label, ctype, fname)
         circuit_analyses.append((label, a))
 
@@ -560,7 +412,6 @@ def run_analysis():
             continue
         a = DistributionAnalysis(clean["time_seconds"].values, label=label)
         a.fit_all()
-        a.run_gof_tests()
         plot_single_distribution(a, label, descr, fname)
         era_analyses.append((label, a))
 

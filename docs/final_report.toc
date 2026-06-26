@@ -7,58 +7,57 @@
 \contentsline {subsection}{\numberline {2.1}Question and motivation}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Data and cleaning}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Candidate distributions}{5}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Goodness-of-fit criteria}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}How we judge a fit}{5}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Deep dive: 2023 Italian Grand Prix}{5}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Cross-circuit comparison}{10}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Cross-era comparison at Monza}{12}{subsection.2.7}%
-\contentsline {subsection}{\numberline {2.8}Synthesis: why right-skew is the rule}{15}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Take-home and practical implications}{16}{subsection.2.9}%
-\contentsline {section}{\numberline {3}Starting-Grid Advantage}{16}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Question and motivation}{16}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Data}{17}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Empirical baseline: pole conversion}{17}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Probability decay across the grid}{17}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Modern-era stratification}{18}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}OLS with a street-circuit interaction}{18}{subsection.3.6}%
-\contentsline {subsection}{\numberline {3.7}Predictive models}{19}{subsection.3.7}%
-\contentsline {paragraph}{LSTM regression of finishing position.}{19}{paragraph*.33}%
-\contentsline {subsection}{\numberline {3.8}Discussion and limitations}{19}{subsection.3.8}%
-\contentsline {section}{\numberline {4}Home-Race Advantage}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Question and motivation}{20}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The era-adjusted teammate delta}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Auxiliary covariates}{21}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Defining the home indicator}{22}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}RQ1: paired t-test}{23}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}RQ2: linear mixed-effects model}{24}{subsection.4.6}%
-\contentsline {subsection}{\numberline {4.7}RQ3: XGBoost with time-series cross-validation}{25}{subsection.4.7}%
-\contentsline {subsection}{\numberline {4.8}Limitations}{27}{subsection.4.8}%
-\contentsline {subsection}{\numberline {4.9}Take-home}{28}{subsection.4.9}%
-\contentsline {section}{\numberline {5}Pit-Stop Strategy}{28}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Question and motivation}{28}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Data and feature engineering}{28}{subsection.5.2}%
-\contentsline {paragraph}{Leakage prevention.}{28}{paragraph*.47}%
-\contentsline {paragraph}{Sequence construction.}{28}{paragraph*.48}%
-\contentsline {subsection}{\numberline {5.3}Bidirectional LSTM pit-stop predictor}{29}{subsection.5.3}%
-\contentsline {paragraph}{Results.}{30}{paragraph*.52}%
-\contentsline {subsection}{\numberline {5.4}Survival and stochastic modelling}{30}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Pace decay and PACF}{30}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Cox proportional hazards}{30}{subsubsection.5.4.2}%
-\contentsline {subsubsection}{\numberline {5.4.3}Team risk profiles via mean and variance of stopping tyre life}{30}{subsubsection.5.4.3}%
-\contentsline {subsubsection}{\numberline {5.4.4}Welch's t-test for \texttt {\small traffic\_pressure}}{32}{subsubsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.5}Strategic regression and VSC agility}{33}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Pit-crew speed and championship points}{33}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}VSC tactical agility score}{33}{subsubsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{33}{subsubsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.6}Overtake classification}{33}{subsection.5.6}%
-\contentsline {subsection}{\numberline {5.7}Descriptive analytics}{34}{subsection.5.7}%
-\contentsline {subsection}{\numberline {5.8}Discussion and future directions}{37}{subsection.5.8}%
-\contentsline {section}{\numberline {6}Joint Discussion}{37}{section.6}%
-\contentsline {paragraph}{Machinery first, driver second.}{38}{paragraph*.64}%
-\contentsline {paragraph}{Era drift matters as much as model choice.}{38}{paragraph*.65}%
-\contentsline {paragraph}{The right baseline beats the right model.}{38}{paragraph*.66}%
-\contentsline {paragraph}{What we did not do.}{38}{paragraph*.67}%
-\contentsline {section}{\numberline {7}Conclusions}{38}{section.7}%
-\contentsline {section}{\numberline {A}Reproducibility}{39}{appendix.A}%
-\contentsline {paragraph}{Software.}{39}{paragraph*.68}%
-\contentsline {paragraph}{Data.}{39}{paragraph*.69}%
-\contentsline {paragraph}{Entry points.}{39}{paragraph*.70}%
+\contentsline {subsection}{\numberline {2.6}Cross-circuit comparison}{7}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Cross-era comparison at Monza}{9}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Synthesis: why right-skew is the rule}{11}{subsection.2.8}%
+\contentsline {section}{\numberline {3}Starting-Grid Advantage}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Question and motivation}{13}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Data}{13}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Empirical baseline: pole conversion}{13}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Probability decay across the grid}{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Modern-era stratification}{14}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}OLS with a street-circuit interaction}{14}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Predictive models}{15}{subsection.3.7}%
+\contentsline {paragraph}{LSTM regression of finishing position.}{15}{paragraph*.26}%
+\contentsline {subsection}{\numberline {3.8}Discussion and limitations}{15}{subsection.3.8}%
+\contentsline {section}{\numberline {4}Home-Race Advantage}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Question and motivation}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The era-adjusted teammate delta}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Auxiliary covariates}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Defining the home indicator}{18}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}RQ1: paired t-test}{19}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}RQ2: linear mixed-effects model}{20}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}RQ3: XGBoost with time-series cross-validation}{21}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Limitations}{23}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Take-home}{24}{subsection.4.9}%
+\contentsline {section}{\numberline {5}Pit-Stop Strategy}{24}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Question and motivation}{24}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Data and feature engineering}{24}{subsection.5.2}%
+\contentsline {paragraph}{Leakage prevention.}{24}{paragraph*.40}%
+\contentsline {paragraph}{Sequence construction.}{24}{paragraph*.41}%
+\contentsline {subsection}{\numberline {5.3}Bidirectional LSTM pit-stop predictor}{25}{subsection.5.3}%
+\contentsline {paragraph}{Results.}{26}{paragraph*.45}%
+\contentsline {subsection}{\numberline {5.4}Survival and stochastic modelling}{26}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Pace decay and PACF}{26}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Cox proportional hazards}{26}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}Team risk profiles via mean and variance of stopping tyre life}{26}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}Welch's t-test for \texttt {\small traffic\_pressure}}{28}{subsubsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.5}Strategic regression and VSC agility}{29}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Pit-crew speed and championship points}{29}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}VSC tactical agility score}{29}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}Random-forest outcome classifier}{29}{subsubsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.6}Overtake classification}{29}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Descriptive analytics}{30}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Discussion and future directions}{33}{subsection.5.8}%
+\contentsline {section}{\numberline {6}Joint Discussion}{33}{section.6}%
+\contentsline {paragraph}{Machinery first, driver second.}{34}{paragraph*.57}%
+\contentsline {paragraph}{Era drift matters as much as model choice.}{34}{paragraph*.58}%
+\contentsline {paragraph}{The right baseline beats the right model.}{34}{paragraph*.59}%
+\contentsline {paragraph}{What we did not do.}{34}{paragraph*.60}%
+\contentsline {section}{\numberline {7}Conclusions}{34}{section.7}%
+\contentsline {section}{\numberline {A}Reproducibility}{35}{appendix.A}%
+\contentsline {paragraph}{Software.}{35}{paragraph*.61}%
+\contentsline {paragraph}{Data.}{35}{paragraph*.62}%
+\contentsline {paragraph}{Entry points.}{35}{paragraph*.63}%

@@ -15,10 +15,10 @@ the regulation era?
 2. Clean the lap-time observations by removing the formation lap, laps
    affected by safety-car or virtual safety-car deployments, pit in-laps
    and out-laps, and outliers identified by the interquartile-range rule.
-3. Fit five candidate parametric families by maximum likelihood: Normal,
-   Log-Normal, Gamma, Weibull, and Gumbel.
-4. Assess fit quality using the Kolmogorov–Smirnov test, chi-squared test,
-   Akaike Information Criterion, and Bayesian Information Criterion.
+3. Fit three candidate parametric families by maximum likelihood: Normal,
+   Log-Normal, and Gamma.
+4. Rank the candidate distributions using the Akaike Information
+   Criterion (AIC) and Bayesian Information Criterion (BIC).
 5. Produce diagnostic visualisations: histograms with overlaid probability
    density functions, quantile–quantile plots, and empirical versus
    theoretical cumulative distribution functions.
@@ -45,7 +45,7 @@ Six figures are written to `outputs/lap_time_distributions/`:
 | File | Content |
 |---|---|
 | `fig1_distribution_overview.png` | Histogram with fitted PDFs, AIC and BIC comparison, Q-Q plot for the best-fitting distribution, and CDF comparison. |
-| `fig2_qq_all_distributions.png` | Q-Q plots for all five candidate distributions. |
+| `fig2_qq_all_distributions.png` | Q-Q plots for all three candidate distributions. |
 | `fig3_gof_summary_table.png` | Tabulated goodness-of-fit results. |
 | `fig4_cross_circuit.png` | Distributional comparison across circuit types. |
 | `fig5_cross_era.png` | Distributional comparison across regulation eras. |

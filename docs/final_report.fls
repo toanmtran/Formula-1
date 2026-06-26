@@ -352,6 +352,7 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8t.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\tex\latex\psnfss\ts1ppl.fd
@@ -365,77 +366,33 @@ INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplri8t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8c.vf
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
+INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8t.tfm
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT ..\outputs\lap_time_distributions\01_overview_histogram.png
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplri8t.vf
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
 INPUT ..\outputs\lap_time_distributions\02_overview_aic_bic.png
-INPUT ..\outputs\lap_time_distributions\03_overview_qq_best.png
-INPUT ..\outputs\lap_time_distributions\03_overview_qq_best.png
-INPUT ..\outputs\lap_time_distributions\03_overview_qq_best.png
-INPUT ..\outputs\lap_time_distributions\03_overview_qq_best.png
-INPUT ..\outputs\lap_time_distributions\03_overview_qq_best.png
-INPUT ..\outputs\lap_time_distributions\03_overview_qq_best.png
 INPUT ..\outputs\lap_time_distributions\04_overview_cdf.png
 INPUT ..\outputs\lap_time_distributions\04_overview_cdf.png
 INPUT ..\outputs\lap_time_distributions\04_overview_cdf.png
 INPUT ..\outputs\lap_time_distributions\04_overview_cdf.png
 INPUT ..\outputs\lap_time_distributions\04_overview_cdf.png
 INPUT ..\outputs\lap_time_distributions\04_overview_cdf.png
-INPUT ..\outputs\lap_time_distributions\05_qq_normal.png
-INPUT ..\outputs\lap_time_distributions\05_qq_normal.png
-INPUT ..\outputs\lap_time_distributions\05_qq_normal.png
-INPUT ..\outputs\lap_time_distributions\05_qq_normal.png
-INPUT ..\outputs\lap_time_distributions\05_qq_normal.png
-INPUT ..\outputs\lap_time_distributions\05_qq_normal.png
-INPUT ..\outputs\lap_time_distributions\06_qq_lognormal.png
-INPUT ..\outputs\lap_time_distributions\06_qq_lognormal.png
-INPUT ..\outputs\lap_time_distributions\06_qq_lognormal.png
-INPUT ..\outputs\lap_time_distributions\06_qq_lognormal.png
-INPUT ..\outputs\lap_time_distributions\06_qq_lognormal.png
-INPUT ..\outputs\lap_time_distributions\06_qq_lognormal.png
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
-INPUT ..\outputs\lap_time_distributions\07_qq_gamma.png
-INPUT ..\outputs\lap_time_distributions\07_qq_gamma.png
-INPUT ..\outputs\lap_time_distributions\07_qq_gamma.png
-INPUT ..\outputs\lap_time_distributions\07_qq_gamma.png
-INPUT ..\outputs\lap_time_distributions\07_qq_gamma.png
-INPUT ..\outputs\lap_time_distributions\07_qq_gamma.png
-INPUT ..\outputs\lap_time_distributions\08_qq_weibull.png
-INPUT ..\outputs\lap_time_distributions\08_qq_weibull.png
-INPUT ..\outputs\lap_time_distributions\08_qq_weibull.png
-INPUT ..\outputs\lap_time_distributions\08_qq_weibull.png
-INPUT ..\outputs\lap_time_distributions\08_qq_weibull.png
-INPUT ..\outputs\lap_time_distributions\08_qq_weibull.png
-INPUT ..\outputs\lap_time_distributions\09_qq_gumbel.png
-INPUT ..\outputs\lap_time_distributions\09_qq_gumbel.png
-INPUT ..\outputs\lap_time_distributions\09_qq_gumbel.png
-INPUT ..\outputs\lap_time_distributions\09_qq_gumbel.png
-INPUT ..\outputs\lap_time_distributions\09_qq_gumbel.png
-INPUT ..\outputs\lap_time_distributions\09_qq_gumbel.png
 INPUT ..\outputs\lap_time_distributions\11_circuit_monza.png
 INPUT ..\outputs\lap_time_distributions\11_circuit_monza.png
 INPUT ..\outputs\lap_time_distributions\11_circuit_monza.png
@@ -448,12 +405,6 @@ INPUT ..\outputs\lap_time_distributions\12_circuit_monaco.png
 INPUT ..\outputs\lap_time_distributions\12_circuit_monaco.png
 INPUT ..\outputs\lap_time_distributions\12_circuit_monaco.png
 INPUT ..\outputs\lap_time_distributions\12_circuit_monaco.png
-INPUT ..\outputs\lap_time_distributions\13_circuit_silverstone.png
-INPUT ..\outputs\lap_time_distributions\13_circuit_silverstone.png
-INPUT ..\outputs\lap_time_distributions\13_circuit_silverstone.png
-INPUT ..\outputs\lap_time_distributions\13_circuit_silverstone.png
-INPUT ..\outputs\lap_time_distributions\13_circuit_silverstone.png
-INPUT ..\outputs\lap_time_distributions\13_circuit_silverstone.png
 INPUT ..\outputs\lap_time_distributions\14_era_v10.png
 INPUT ..\outputs\lap_time_distributions\14_era_v10.png
 INPUT ..\outputs\lap_time_distributions\14_era_v10.png
@@ -505,6 +456,10 @@ INPUT ..\outputs\starting_grid_advantage\plots\02_mean_finish_decay.png
 INPUT ..\outputs\starting_grid_advantage\plots\02_mean_finish_decay.png
 INPUT ..\outputs\starting_grid_advantage\plots\02_mean_finish_decay.png
 INPUT ..\outputs\starting_grid_advantage\plots\02_mean_finish_decay.png
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplb7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr8t.vf
 INPUT ..\outputs\home_advantage\figures\01_teammate_delta_hist.png
@@ -683,6 +638,9 @@ INPUT ..\outputs\pit_stop_strategy\plots\07b_pace_decay_hist.png
 INPUT ..\outputs\pit_stop_strategy\plots\07b_pace_decay_hist.png
 INPUT ..\outputs\pit_stop_strategy\plots\07b_pace_decay_hist.png
 INPUT ..\outputs\pit_stop_strategy\plots\07b_pace_decay_hist.png
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\LENOVO\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT final_report.aux
 INPUT .\final_report.out
 INPUT .\final_report.out
